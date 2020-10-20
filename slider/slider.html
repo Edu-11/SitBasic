@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <title>Slider</title>
+    <link href="/slider/slider.css" rel="stylesheet">
+</head>
+    <body>
+        <section id="slider" class="slider">
+            <div id="wrapper" class="slides-wrapper">
+                <div id="slide" class="slide" data-slide-id="0">
+                    <img class="slide__img"
+                        src="/images/20140322SantMoriBancoCaballeriaJardinMonicaMarti_DSC6879_1500p_BR.jpg"
+                        alt="slider-0">
+                    <div class="slide__caption">
+                        <span class="slide__caption--title">Slide 1</span>
+                        <span class="slide__caption--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Ipsam assumenda nostrum quisquam voluptatem consectetur dolore, necessitatibus doloribus
+                            temporibus, enim animi adipisci architecto ipsum, labore corporis! Quaerat doloribus
+                            consequatur ex blanditiis?</span>
+                    </div>
+                </div>
+                <div id="slide" class="slide" data-slide-id="1">
+                    <img class="slide__img"
+                        src="/images/20140515Bancoplegable110GrafittiTirso_DSC1155.jpg"
+                        alt="slider-1">
+                    <div class="slide__caption">
+                        <span class="slide__caption--title">Slide 2</span>
+                        <span class="slide__caption--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Ipsam assumenda nostrum quisquam voluptatem consectetur dolore, necessitatibus doloribus
+                            temporibus, enim animi adipisci architecto ipsum, labore corporis! Quaerat doloribus
+                            consequatur ex blanditiis?</span>
+                    </div>
+                </div>
+                <div id="slide" class="slide" data-slide-id="2">
+                    <img class="slide__img"
+                        src="/images/20171028FamiliaPinyol_BancoPlegableEnExterior.jpg"
+                        alt="slider-2">
+                    <div class="slide__caption">
+                        <span class="slide__caption--title">Slide 3</span>
+                        <span class="slide__caption--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Ipsam assumenda nostrum quisquam voluptatem consectetur dolore, necessitatibus doloribus
+                            temporibus, enim animi adipisci architecto ipsum, labore corporis! Quaerat doloribus
+                            consequatur ex blanditiis?</span>
+                    </div>
+                </div>
+                <div id="slide" class="slide" data-slide-id="3">
+                    <video id="video1" class="video embed-responsive embed-responsive-16by9"
+                    width="1280" height="720" controls>
+                    <source src="https://dpvclip.antena3.com//mp_series2/2014/07/19/00083.mp4" type="video/mp4">
+                    Tu navegador no soporta video en HTML5.
+                    </video>
+                    <div class="slide__caption">
+                        <span class="slide__caption--title">Slide 4</span>
+                        <span class="slide__caption--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Ipsam assumenda nostrum quisquam voluptatem consectetur dolore, necessitatibus doloribus
+                            temporibus, enim animi adipisci architecto ipsum, labore corporis! Quaerat doloribus
+                            consequatur ex blanditiis?</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="slider__btn slider__btn--prev" data-slide="prev">
+                <div class="arrow_left">
+                    <div class="line_l1"></div>
+                    <div class="line_l2"></div>
+                </div>
+            </a>
+            <a href="#" class="slider__btn slider__btn--next" data-slide="next">
+                <div class="arrow_right">
+                        <div class="line_r1"></div>
+                        <div class="line_r2"></div>
+                </div>
+            </a>
+
+            <div class="indicators">
+                <ul class="indicators__list">
+                    <li class="indicators__item active" data-slide-to="0"></li>
+                    <li class="indicators__item" data-slide-to="1"></li>
+                    <li class="indicators__item" data-slide-to="2"></li>
+                    <li class="indicators__item" data-slide-to="3"></li>
+                </ul>
+            </div>
+        </section>
+
+        <script>
+                $('#video1').on('play', function (e) {
+                    $("#carouselSitbasic").carousel('pause');
+                });
+                $('#video1').on('stop pause ended', function (e) {
+                    $("#carouselSitbasic").carousel();
+                });
+        </script>
+
+        <script src="/slider/script-compiled.js"></script>
+    </body>
+</html> 

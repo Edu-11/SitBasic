@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <title>Arrow Left</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+        }
+
+        .arrow_left {
+            position: absolute;
+            margin-top: 5px;
+            width: 50px;
+            height: 40px;
+            z-index: 1;
+        }
+
+        .arrow_left div {
+        width: 25px;
+        height: 5px;
+        background-color: #ffffff;
+        margin: 10px;
+        }
+
+        .line_l1 {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        }
+
+        .line_l2 {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="arrow_left">
+        <div class="line_l1"></div>
+        <div class="line_l2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1456 @@
+@charset "UTF-8";
+html {
+  font-size: 17px;
+  line-height: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 2% 2% 2% 0;
+  line-height: 1.2;
+  font-size: 2.5rem;
+  color: rgba(85, 90, 4, 0.8);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: rgba(170, 180, 8, 0.7);
+  line-height: 1.5;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #aab408;
+}
+
+p {
+  font-size: 1rem;
+  color: #969696;
+  font-weight: 300;
+}
+
+sub {
+  color: #969696;
+  z-index: -1;
+}
+
+a,
+a:hover,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #969696;
+}
+
+/* ---------- Barra de navegador ------------- */
+#header {
+  width: 100%;
+  background-color: #fff;
+  height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  opacity: .92;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60px;
+  margin: 0;
+}
+
+.nav-bar {
+  margin: 0 10% 0 10%;
+}
+
+#header-img {
+  height: 35px;
+  margin: 10% 0 0 0;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1% 2.5% 0 0;
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 39%;
+  text-decoration: none;
+  color: #969696;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgba(170, 180, 8, 0.7);
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-item {
+  font-size: 1.1rem;
+  margin: 5%;
+}
+
+.nav-item a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.nav-item a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: rgba(170, 180, 8, 0.7);
+  width: 0;
+  left: 50%;
+  bottom: -3px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+.nav-item a:hover:after {
+  width: 100%;
+}
+
+/* ------------ Presentación | Imagen principal con texto ------------- */
+#presentacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 12% 10% 10% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  scroll-behavior: smooth;
+  z-index: 0;
+}
+
+.titular {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.intro-text {
+  margin: 12% 25% 0 0;
+}
+
+.intro-text p {
+  margin: 2% 12% 2% 0;
+}
+
+.botones {
+  padding-bottom: 3%;
+}
+
+.boton-diseño,
+.boton-comprar {
+  margin: 2% 2% 5% 0;
+  border: 1px solid rgba(170, 180, 8, 0.7);
+  border-radius: 50px;
+  background: transparent;
+  color: rgba(170, 180, 8, 0.7);
+  width: 12vw;
+  height: 2.5vw;
+  font-size: 1rem;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.boton-comprar {
+  background-color: rgba(170, 180, 8, 0.7);
+  color: #fff;
+  border-color: rgba(170, 180, 8, 0.3);
+}
+
+.boton-comprar:hover {
+  background: rgba(85, 90, 4, 0.8);
+  color: #fff;
+  border: 1px solid #aab408;
+}
+
+.boton-diseño:hover {
+  background-color: rgba(170, 180, 8, 0.7);
+  color: #fff;
+  border-color: rgba(170, 180, 8, 0.3);
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.cover {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-animation: drop ease-in;
+          animation: drop ease-in;
+  width: 50%;
+}
+
+.imagen-banco {
+  width: 100%;
+  height: auto;
+  -webkit-animation: drop 1.5s ease-in;
+          animation: drop 1.5s ease-in;
+}
+
+/* -------------------- Galería de Fotos | Testimoniales ---------------- */
+#galeria {
+  padding: 5% 0 0 0;
+  margin: auto;
+  background-color: #fff;
+}
+
+.galeria {
+  padding: 5% 0 0 0;
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+}
+
+.slider__btn {
+  display: block;
+  position: absolute;
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 5vh;
+  padding: 0 5%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider__btn--next {
+  right: 0;
+}
+
+.slider__btn--prev {
+  left: 0;
+}
+
+.slider__btn .arrow {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.slider__btn:hover .arrow {
+  color: #fff;
+  cursor: pointer;
+}
+
+.slides {
+  width: 100%;
+  position: relative;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  display: none;
+  background-color: black;
+}
+
+.slide.current {
+  display: block;
+  -webkit-animation: fade 1s ease;
+  animation: fade 1s ease;
+}
+
+.slide__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.slide__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 68%;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  max-width: 60%;
+  text-shadow: 0px 0px 4px #757575;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slide__caption--title {
+  font-size: 1.6rem;
+}
+
+.slide__caption--text {
+  font-size: 1.2rem;
+}
+
+.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.indicators__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.indicators__item {
+  display: block;
+  width: 3rem;
+  height: 0.5rem;
+  background: rgba(95, 95, 95, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.indicators__item:hover {
+  -webkit-box-shadow: 0 0 .6px #888888;
+  box-shadow: 0 0 .6px #888888;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.indicators__item.active {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 1px #505050;
+  box-shadow: 0 0 1px #505050;
+}
+
+.indicators__item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.arrow_left {
+  position: absolute;
+  margin-top: 5px;
+  width: 50px;
+  height: 40px;
+  z-index: 1;
+}
+
+.arrow_left div {
+  width: 25px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 10px;
+}
+
+.line_l1 {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.line_l2 {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrow_right {
+  position: absolute;
+  margin-top: 5px;
+  width: 50px;
+  height: 40px;
+  z-index: 1;
+}
+
+.arrow_right div {
+  width: 25px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 10px;
+}
+
+.line_r1 {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.line_r2 {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* -------------------- Sección Diseño -----------------------
+Dividida en dos cuerpos; Historia y Rediseño.
+*/
+.Diseño_Historia {
+  padding: 6% 5%;
+  text-align: center;
+}
+
+.Historia,
+.Rediseño {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Historia_txt,
+.Imagen_Historia,
+.Imagen_rediseño,
+.Rediseño_txt {
+  margin: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.Historia_txt p,
+.Rediseño_txt p {
+  margin: 0 11%;
+  text-align: justify;
+}
+
+.Imagen_Historia img,
+.Imagen_rediseño img {
+  width: 45%;
+  height: auto;
+  -webkit-animation: drop 1.5s ease-in;
+          animation: drop 1.5s ease-in;
+}
+
+/* Animación imágenes */
+@-webkit-keyframes drop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes drop2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes drop2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+/* ---------------- Sección Catálogo --------------------- */
+#Catalogo {
+  width: 90%;
+  padding: 7% 5% 3%;
+  margin: auto;
+  text-align: center;
+}
+
+.Cabecera_Catalogo {
+  padding: 0 15%;
+}
+
+.Cabecera_Catalogo a {
+  color: #aab408 !important;
+  font-weight: 600;
+}
+
+.Catalogo_Linea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Tabla_Banco_C,
+.Tabla_Herrajes_B,
+.Tabla_Herrajes_S,
+.Tabla_Licencia {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 5%;
+  padding: 1%;
+  margin: 1.5% 5%;
+  min-width: 30%;
+  max-width: 35%;
+  height: auto;
+  -webkit-box-shadow: 1px 1px 10px rgba(165, 165, 165, 0.2);
+          box-shadow: 1px 1px 10px rgba(165, 165, 165, 0.2);
+}
+
+.Tabla_Banco_C:hover,
+.Tabla_Herrajes_B:hover,
+.Tabla_Herrajes_S:hover,
+.Tabla_Licencia:hover {
+  -webkit-box-shadow: 6px 6px 20px rgba(140, 140, 140, 0.5);
+          box-shadow: 6px 6px 20px rgba(140, 140, 140, 0.5);
+}
+
+.Imagen_tabla img {
+  margin: 6%;
+  width: 30vh;
+  height: auto;
+}
+
+.Contenido_tabla {
+  margin: 5% 2%;
+}
+
+.Titulo_tabla {
+  margin: 4% 0;
+}
+
+.Titulo_tabla h1 {
+  margin: 2%;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #aab408;
+}
+
+.Contenido_tabla ul {
+  padding: 0;
+  margin: 3% 0;
+  list-style-type: none;
+  line-height: 2;
+  color: #969696;
+}
+
+.Boton_Banco_Caballeria,
+.Boton_Herrajes_B,
+.Boton_Herrajes_S,
+.Boton_Licencia {
+  margin: 10% 0 6%;
+  border: 1px solid rgba(170, 180, 8, 0.3);
+  border-radius: 50px;
+  background: transparent;
+  color: rgba(170, 180, 8, 0.7);
+  width: 12vw;
+  height: 2.5vw;
+  font-size: 1rem;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.Boton_Banco_Caballeria:hover,
+.Boton_Herrajes_B:hover,
+.Boton_Herrajes_S:hover,
+.Boton_Licencia:hover {
+  background: rgba(170, 180, 8, 0.7);
+  border-color: rgba(170, 180, 8, 0.3);
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+/* ------------- Apartado Contacto - Formulario -------------- */
+.Contacto {
+  padding: 5% 5% 3%;
+  color: #969696;
+}
+
+.Contacto p {
+  font-size: 2rem;
+}
+
+.formulario {
+  text-align: center;
+}
+
+#name,
+#name-label,
+#surname,
+#surname-label,
+#email,
+#phone,
+#phone-label,
+#pais,
+#pais-label {
+  margin: .6rem;
+  padding: .6rem;
+}
+
+#email-label {
+  padding: 1.8rem;
+}
+
+#phone-label {
+  padding: .7rem;
+}
+
+input,
+select,
+textarea {
+  font-size: .9rem;
+  color: #afafaf;
+  margin: .35rem;
+  padding: .2rem .5rem;
+}
+
+select {
+  padding: .3rem .5rem;
+}
+
+textarea {
+  margin: 1rem;
+}
+
+#submit {
+  border: 1px solid #aab408;
+  border-radius: 50px;
+  background: transparent;
+  color: rgba(170, 180, 8, 0.7);
+  width: 12vw;
+  height: 2.5vw;
+  font-size: 1rem;
+}
+
+#submit:hover {
+  background: rgba(170, 180, 8, 0.7);
+  border-color: rgba(170, 180, 8, 0.3);
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+/*------------ Footer ---------------*/
+#footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container_footer {
+  background-color: rgba(170, 180, 8, 0.7);
+  color: #fff;
+  padding: 1% 1% .2%;
+  text-align: center;
+  font-size: .85rem;
+  margin-bottom: 0;
+}
+
+.Sitbasic {
+  padding: 1% 0 0;
+  margin-bottom: 0;
+}
+
+.container_footer p {
+  color: #fff;
+}
+
+.ft {
+  display: inline-block;
+  padding: 0 2%;
+  margin: auto;
+  color: #fff;
+}
+
+.footer-links a:hover,
+.footer-links a:link,
+.footer-links a:visited,
+.footer-links a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-links a:hover {
+  cursor: pointer;
+  color: rgba(85, 90, 4, 0.8);
+}
+
+/* Aviso legal + Política de privacidad */
+.aviso_legal_pag,
+.politica_pivacidad_pag,
+.montaje_pag,
+.galeria_pag {
+  width: 90%;
+  padding: 3% 5%;
+  line-height: 1.8;
+}
+
+.aviso_legal_pag h3,
+.politica_pivacidad_pag h3,
+.montaje_pag h3,
+.galeria_pag h3 {
+  margin: 2% 5%;
+  text-align: center;
+  color: rgba(170, 180, 8, 0.7);
+}
+
+/* --------- Galeria ------------ */
+.galeria_imagen_1,
+.galeria_imagen_2,
+.galeria_imagen_3,
+.galeria_imagen_4,
+.galeria_imagen_5 {
+  text-align: center;
+  padding: 2%;
+}
+
+.galeria_pag sub {
+  font-size: .8rem;
+}
+
+/* --------------------- Media queries ------------------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+/* ------------------ MEDIA QUERY 1600 ----------------------- */
+@media screen and (max-width: 1601px) {
+  /* ---------- Barra de navegador ------------- */
+  .nav-bar {
+    margin: 0 17% 0 10%;
+  }
+}
+
+/* ------------------ MEDIA QUERY 1351 ----------------------- */
+@media screen and (max-width: 1351px) {
+  /* ---------- Barra de navegador ------------- */
+  .nav-bar {
+    margin: 0 23% 0 10%;
+  }
+}
+
+/* ------------------ MEDIA QUERY 1280 ----------------------- */
+@media screen and (max-width: 1281px) {
+  html {
+    font-size: 15px;
+  }
+  /* ---------- Barra de navegador ------------- */
+  #header-img {
+    height: 30px;
+    margin: 10% 0 0 0;
+  }
+  .nav-bar {
+    margin: 0 21% 0 10%;
+  }
+  /* -- Presentación | Imagen principal con texto ---- */
+  #presentacion {
+    padding: 12% 10%;
+  }
+  .imagen-banco {
+    margin: 0 0 0 15%;
+  }
+  /* ------- Galería de Fotos | Testimoniales ----- */
+  #galeria {
+    padding: 6% 5%;
+  }
+  .galeria {
+    width: 80%;
+  }
+  .slider__btn {
+    height: 75%;
+    top: 5vh;
+    padding: 0 10%;
+  }
+  /* ---------------- Sección Diseño -------------- */
+  #Disegno {
+    padding: 4% 5%;
+  }
+  .Historia,
+  .Rediseño {
+    margin: 1%;
+    padding: 1%;
+  }
+  /* ------------ Sección Catálogo ------------ */
+  #Catalogo {
+    padding: 5%;
+  }
+  .Imagen_tabla img {
+    margin: 6%;
+    width: 22vh;
+    height: auto;
+  }
+  /* Apartado Contacto - Formulario */
+  .Contacto {
+    padding: 4% 5% 1%;
+    color: #969696;
+  }
+}
+
+/* -------------------- MEDIA QUERY 1068 -------------------------   */
+@media screen and (max-width: 1068px) {
+  html {
+    font-size: 14.5px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: .75rem;
+  }
+  /* ---------- Barra de navegador ------------- */
+  .nav-bar {
+    margin: 0 26% 0 10%;
+  }
+  #header-img {
+    height: 28px;
+    margin: auto;
+  }
+  .nav-item {
+    font-size: 1rem;
+    margin: 3% 0% 1% 10%;
+  }
+  /* --------- Presentación | Imagen principal con texto --------- */
+  #presentacion {
+    padding: 10%;
+  }
+  .cover {
+    width: 50%;
+  }
+  /* ------------- Galería de Fotos | Testimoniales ------ */
+  #galeria {
+    padding: 8% 5%;
+  }
+  /* -------------------- Sección Diseño ----------------- */
+  .Diseño_Historia {
+    padding: 8% 5%;
+  }
+  .Historia,
+  .Rediseño {
+    margin: 2%;
+    padding: 2%;
+  }
+  .Imagen_Historia img,
+  .Imagen_rediseño img {
+    -webkit-animation: drop2 1.5s ease-in;
+            animation: drop2 1.5s ease-in;
+  }
+  /* ---------------- Sección Catálogo --------------------- */
+  #Catalogo {
+    padding: 12% 5%;
+  }
+  .Cabecera_Catalogo {
+    padding: 1% 15%;
+  }
+  .Catalogo_Linea {
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+  .Imagen_tabla img {
+    margin: 6%;
+    width: 22vh;
+    height: auto;
+  }
+  .Titulo_tabla h1 {
+    margin: 1%;
+    font-size: 1.2rem;
+  }
+  .Contenido_tabla ul {
+    line-height: 1.6;
+  }
+  /* -------- Apartado Contacto - Formulario ---------- */
+  .Contacto {
+    padding: 3% 5%;
+    color: #969696;
+  }
+  #submit {
+    margin: 2%;
+  }
+  /* --------- Aviso Legal + Privacidad -------------- */
+  .aviso_legal_pag,
+  .politica_pivacidad_pag,
+  .montaje_pag,
+  .galeria_pag {
+    width: 90%;
+    padding: 8% 5%;
+    line-height: 1.8;
+  }
+}
+
+/* -------------------- MEDIA QUERY 991  -------------------------   */
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
+  /* ---------- Barra de navegador ------------- */
+  .nav-bar {
+    margin: 0 24% 0 10%;
+  }
+  #header-img {
+    height: 26px;
+    margin: auto;
+  }
+  .nav-links {
+    margin: 1% 8% 0 0;
+  }
+  .nav-item {
+    font-size: 1rem;
+    margin: 1% 1% 2% 10%;
+  }
+  /* ------------ Presentación | Imagen principal con texto ------------- */
+  #presentacion {
+    padding: 10%;
+  }
+  .boton-diseño,
+  .boton-comprar {
+    width: 14vw;
+    height: 3vw;
+  }
+  /* -------------------- Galería de Fotos | Testimoniales ---------------- */
+  #galeria {
+    padding: 14% 5%;
+  }
+  .carousel-item {
+    height: 60vh;
+    width: auto;
+  }
+}
+
+/* --------------------- media query 850 --------------------------------- */
+@media screen and (max-width: 850px) {
+  /* ---------- Barra de navegador ------------- */
+  .nav-bar {
+    margin: 0 32% 0 10%;
+  }
+}
+
+/* -------------------- media query 769 (toggler) -------------------------   */
+@media screen and (max-width: 769px) {
+  body {
+    overflow-x: hidden;
+  }
+  html {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: .65rem;
+  }
+  /* ---------- Barra de navegador ------------- */
+  #header,
+  nav {
+    height: 65px;
+  }
+  #header-img {
+    height: 22px;
+    margin: auto;
+  }
+  .nav-bar {
+    margin: 0 15% 0 10%;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 45vh;
+    top: 9vh;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 20%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    color: #969696;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+    margin-right: -5vw;
+    padding-top: 5px;
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .nav-item {
+    margin: 5%;
+  }
+  /* ------------ Presentación | Imagen principal con texto ------------- */
+  #presentacion {
+    padding: 10% 10% 2%;
+  }
+  .botones {
+    padding-bottom: 1%;
+  }
+  .boton-diseño,
+  .boton-comprar {
+    width: 15vw;
+    height: 3.5vw;
+    font-size: 0.8rem;
+  }
+  .imagen-banco {
+    width: 100%;
+  }
+  /* -------------------- Galería de Fotos | Testimoniales ---------------- */
+  #galeria {
+    padding: 14% 5%;
+  }
+  .carousel-item {
+    height: 60vh;
+    width: auto;
+  }
+  /* -------------------- Sección Diseño ----------------- */
+  .Diseño_Historia {
+    padding: 8% 5%;
+  }
+  .Imagen_Historia img,
+  .Imagen_rediseño img {
+    width: 60%;
+    -webkit-animation: drop2 1.5s ease-in;
+            animation: drop2 1.5s ease-in;
+  }
+  /* ---------------- Sección Catálogo --------------------- */
+  #Catalogo {
+    width: 90%;
+    padding: 8% 5%;
+    margin: auto;
+    text-align: center;
+  }
+  .Imagen_tabla img {
+    margin: 5%;
+    width: 22vh;
+  }
+  .Contenido_tabla {
+    margin: 3.5% 2%;
+  }
+  .Titulo_tabla {
+    margin: 3% 0;
+  }
+  .Boton_Banco_Caballeria,
+  .Boton_Herrajes_B,
+  .Boton_Herrajes_S {
+    margin: 4% 0;
+    width: 16vw;
+    height: 4vw;
+    font-size: 1rem;
+  }
+  .Boton_Banco_Pino {
+    width: 22vw;
+    height: 4vw;
+  }
+  /* ------ Apartado Contacto - Formulario ------- */
+  .Contacto {
+    padding: 8% 5% 1%;
+    color: #969696;
+  }
+  #submit {
+    width: 16vw;
+    height: 4vw;
+    font-size: 0.8rem;
+  }
+  /* --------- Aviso Legal + Privacidad -------------- */
+  .aviso_legal_pag,
+  .politica_pivacidad_pag,
+  .montaje_pag,
+  .galeria_pag {
+    width: 90%;
+    padding: 12% 5%;
+    line-height: 1.8;
+  }
+}
+
+/* -------------------- media query 479 (móvil) -------------------------   */
+@media screen and (max-width: 479px) {
+  html {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: .6rem;
+  }
+  /* ---------- Barra de navegador ------------- */
+  #header,
+  nav {
+    height: 70px;
+  }
+  #header-img {
+    height: 20px;
+    margin: auto;
+  }
+  .nav-links {
+    top: 8vh;
+    width: 35%;
+    margin: 1% 8% 0 0;
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  /* ------------ Presentación | Imagen principal con texto ------------- */
+  #presentacion {
+    padding: 15% 10% 0%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro-text {
+    margin: 10% 0 0 0;
+  }
+  .boton-diseño,
+  .boton-comprar {
+    width: 24vw;
+    height: 6vw;
+  }
+  .cover {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    -webkit-animation: drop ease-in;
+            animation: drop ease-in;
+    width: 100%;
+    padding: 10%;
+  }
+  .imagen-banco {
+    width: 100%;
+    margin: 0;
+    -webkit-animation: drop2 1.5s ease-in;
+            animation: drop2 1.5s ease-in;
+    z-index: -1;
+  }
+  /* -------------------- Galería de Fotos | Testimoniales ---------------- */
+  #galeria {
+    padding: 20% 5% 5%;
+  }
+  .carousel-item {
+    height: 35vh;
+    width: auto;
+  }
+  /* -------------------- Sección Diseño ----------------- */
+  .Diseño_Historia {
+    padding: 15% 5% 4%;
+  }
+  .Historia {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .Rediseño {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Historia_txt p,
+  .Rediseño_txt p {
+    margin: 2% 11%;
+    z-index: 1;
+  }
+  .Imagen_Historia img,
+  .Imagen_rediseño img {
+    width: 40%;
+    -webkit-animation: drop2 1.5s ease-in;
+            animation: drop2 1.5s ease-in;
+    z-index: -1;
+  }
+  /* ---------------- Sección Catálogo --------------------- */
+  #Catalogo {
+    width: 90%;
+    padding: 20% 10% 10%;
+    margin: auto;
+    text-align: center;
+  }
+  .Cabecera_Catalogo {
+    padding: 0;
+  }
+  .Tabla_Banco_C,
+  .Tabla_Silla_C,
+  .Tabla_Banco_P,
+  .Tabla_Silla_P {
+    padding: 3%;
+    margin: 1.5%;
+    width: 28vh;
+    height: auto;
+  }
+  .Imagen_tabla img {
+    margin: 5%;
+    width: 22vh;
+  }
+  .Contenido_tabla {
+    margin: 3.5% 2%;
+  }
+  .Titulo_tabla {
+    margin: 2% 0;
+  }
+  .Titulo_tabla h1 {
+    margin: 1.5%;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #aab408;
+  }
+  .Contenido_tabla ul {
+    margin: 1% 0;
+    line-height: 1.5;
+    font-size: 0.8rem;
+  }
+  .Boton_Banco_Caballeria,
+  .Boton_Herrajes_B,
+  .Boton_Herrajes_S,
+  .Boton_Licencia {
+    margin: 4% 0 2%;
+    width: 35vw;
+    height: 7vw;
+    font-size: 0.8rem;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  /* ------ Apartado Contacto - Formulario ------- */
+  .Contacto {
+    padding: 8% 5% 4%;
+    color: #969696;
+  }
+  #name,
+  #name-label,
+  #surname,
+  #surname-label,
+  #email,
+  #email-label,
+  #phone,
+  #phone-label,
+  #pais,
+  #pais-label {
+    margin: 1.5%;
+  }
+  #email {
+    margin-left: 6%;
+  }
+  #phone {
+    margin-left: 2.5%;
+  }
+  #pais {
+    margin-left: 9.5%;
+  }
+  .Desplegable {
+    margin: 1%;
+  }
+  .Comentarios {
+    margin: 2% 0 0 0;
+  }
+  #submit {
+    margin: 4%;
+    width: 28vw;
+    height: 7vw;
+    font-size: 0.8rem;
+  }
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ---------------------------- FIN ----------------------------------- */
+@media screen and (max-width: 560px) {
+  html {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 11px !important;
+  }
+  .slider .indicators__item {
+    width: 5rem;
+    height: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

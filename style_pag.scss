@@ -1,0 +1,676 @@
+$textcolor: rgb(150, 150, 150);
+$color1: rgba(170, 180, 8, 0.7);
+$color2: rgba(170, 180, 8, 1);
+$color2B: rgba(170, 180, 8, 0.3);
+$color3: rgba(85, 90, 4, 0.8);
+$bg-color: #fff;
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+  background-color: $bg-color;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: $color2;
+}
+
+p {
+  font-size: 1rem;
+  color: rgb(150, 150, 150);
+  font-weight: 300;
+}
+
+a,
+a:hover,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: $textcolor;
+}
+
+/* ---------- Barra de navegador ------------- */
+
+#header {
+  width: 100%;
+  background-color: $bg-color;
+  height: 10vh;
+  align-items: center;
+  z-index: 1;
+  opacity: 0.92;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  margin: 0;
+}
+
+.nav-bar {
+  margin: 0 10% 0 10%;
+}
+
+#header-img {
+  height: 35px;
+  margin: auto;
+}
+
+.nav-links {
+  display: flex;
+  margin: 1% 2.5% 0 0;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 39%;
+  text-decoration: none;
+  color: $textcolor;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: $color1;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-item {
+  font-size: 1.1rem;
+  margin: 5%;
+}
+
+.nav-item a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.nav-item a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: $color1;
+  width: 0;
+  left: 50%;
+  bottom: -3px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+.nav-item a:hover:after {
+  width: 100%;
+}
+
+/* ------------ Texto Principal ------------- */
+
+.pedido_realizado_pag,
+.aviso_legal_pag,
+.montaje_pag,
+.galeria_pag {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100%;
+  padding: 12% 10% 10% 10%;
+  align-items: center;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+  z-index: 0;
+}
+
+.aviso_legal_pag h3,
+.pedido_realizado h3,
+.montaje_pag h3,
+.galeria_pag h3 {
+  margin: 2% 5%;
+  text-align: center;
+  color: $color1;
+}
+
+/*------------ Footer ---------------*/
+
+#footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container_footer {
+  background-color: $color1;
+  color: $bg-color;
+  padding: 1% 1% 0.2%;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.Sitbasic {
+  padding: 1% 0 0;
+  margin-bottom: 0;
+}
+
+.container_footer p {
+  color: $bg-color;
+}
+
+.ft {
+  display: inline-block;
+  padding: 0 2%;
+  margin: auto;
+  color: $bg-color;
+}
+
+.footer-links a:hover,
+.footer-links a:link,
+.footer-links a:visited,
+.footer-links a:active {
+  text-decoration: none;
+  color: $bg-color;
+}
+
+.footer-links a:hover {
+  cursor: pointer;
+  color: $color3;
+}
+
+/* Aviso legal + Política de privacidad */
+
+.aviso_legal_pag h3,
+.pedido_realizado h3,
+.montaje_pag h3,
+.galeria_pag h3 {
+  margin: 2% 5%;
+  text-align: center;
+  color: $color1;
+}
+
+/* --------------------- Media queries ------------------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+/* ------------------ MEDIA QUERY 1600 ----------------------- */
+
+@media screen and (max-width: 1601px) {
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 17% 0 10%;
+  }
+}
+
+/* ------------------ MEDIA QUERY 1351 ----------------------- */
+
+@media screen and (max-width: 1351px) {
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 23% 0 10%;
+  }
+}
+
+/* ------------------ MEDIA QUERY 1280 ----------------------- */
+
+@media screen and (max-width: 1281px) {
+  html {
+    font-size: 15px;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  #header-img {
+    height: 32px;
+    margin: auto;
+  }
+
+  .nav-bar {
+    margin: 0 21% 0 10%;
+  }
+}
+
+/* -------------------- MEDIA QUERY 1068 -------------------------   */
+
+@media screen and (max-width: 1068px) {
+  html {
+    font-size: 14.5px;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 26% 0 10%;
+  }
+
+  #header-img {
+    height: 28px;
+    margin: auto;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    margin: 3% 0% 1% 10%;
+  }
+
+  /* --------- Presentación | Imagen principal con texto --------- */
+
+  .pedido_realizado_pag,
+  .aviso_legal_pag,
+  .montaje_pag,
+  .galeria_pag {
+    padding: 10%;
+  }
+
+  .cover {
+    width: 50%;
+  }
+
+  /* --------- Aviso Legal + Privacidad -------------- */
+
+  .aviso_legal_pag,
+  .politica_pivacidad_pag,
+  .montaje_pag,
+  .galeria_pag {
+    width: 90%;
+    padding: 8% 5%;
+    line-height: 1.8;
+  }
+}
+
+/* -------------------- MEDIA QUERY 991  -------------------------   */
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 24% 0 10%;
+  }
+
+  #header-img {
+    height: 26px;
+    margin: auto;
+  }
+
+  .nav-links {
+    margin: 1% 8% 0 0;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    margin: 1% 1% 2% 10%;
+  }
+
+  /* ------------ Presentación | Imagen principal con texto ------------- */
+
+  #presentacion {
+    padding: 10%;
+  }
+
+  .boton-diseño,
+  .boton-comprar {
+    width: 14vw;
+    height: 3vw;
+  }
+
+  /* -------------------- Galería de Fotos | Testimoniales ---------------- */
+
+  #Galeria {
+    padding: 14% 5%;
+  }
+
+  .carousel-item {
+    height: 60vh;
+    width: auto;
+  }
+}
+
+/* --------------------- media query 850 --------------------------------- */
+
+@media screen and (max-width: 850px) {
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 32% 0 10%;
+  }
+}
+
+/* -------------------- media query 769 (toggler) -------------------------   */
+
+@media screen and (max-width: 769px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.65rem;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  #header,
+  nav {
+    height: 65px;
+  }
+
+  #header-img {
+    height: 22px;
+    margin: auto;
+  }
+
+  .nav-bar {
+    margin: 0 15% 0 10%;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 45vh;
+    top: 9vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    color: $textcolor;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    margin-right: -5vw;
+    padding-top: 5px;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .nav-item {
+    margin: 5%;
+  }
+
+  /* ------------ Presentación | Imagen principal con texto ------------- */
+
+  #presentacion {
+    padding: 10% 10% 2%;
+  }
+
+  .botones {
+    padding-bottom: 1%;
+  }
+
+  .boton-diseño,
+  .boton-comprar {
+    width: 15vw;
+    height: 3.5vw;
+    font-size: 0.8rem;
+  }
+
+  .imagen-banco {
+    width: 100%;
+  }
+
+  /* -------------------- Galería de Fotos | Testimoniales ---------------- */
+
+  #Galeria {
+    padding: 14% 5%;
+  }
+
+  .carousel-item {
+    height: 60vh;
+    width: auto;
+  }
+
+  /* -------------------- Sección Diseño ----------------- */
+
+  .Diseño_Historia {
+    padding: 8% 5%;
+  }
+
+  .Imagen_Historia img,
+  .Imagen_rediseño img {
+    width: 60%;
+    animation: drop2 1.5s ease-in;
+  }
+
+  /* ---------------- Sección Catálogo --------------------- */
+
+  #Catalogo {
+    width: 90%;
+    padding: 8% 5%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .Tabla_Banco_C,
+  .Tabla_Silla_C {
+    margin: 1%;
+    width: 30vh;
+  }
+
+  .Tabla_Banco_P {
+    display: block;
+    padding: 1% 15%;
+    margin: 1%;
+    width: 25vh;
+  }
+
+  .Imagen_tabla img {
+    margin: 5%;
+    width: 22vh;
+  }
+
+  .Contenido_tabla {
+    margin: 3.5% 2%;
+  }
+
+  .Titulo_tabla {
+    margin: 3% 0;
+  }
+
+  .Boton_Banco_Caballeria,
+  .Boton_Silla_Caballeria,
+  .Boton_Banco_Pino {
+    margin: 4% 0;
+    width: 16vw;
+    height: 4vw;
+    font-size: 1rem;
+  }
+
+  .Boton_Banco_Pino {
+    width: 22vw;
+    height: 4vw;
+  }
+
+  /* ------ Apartado Contacto - Formulario ------- */
+
+  .Contacto {
+    padding: 8% 5% 1%;
+    color: $textcolor;
+  }
+
+  #name,
+  #name-label,
+  #surname,
+  #surname-label,
+  #email,
+  #email-label,
+  #phone,
+  #phone-label,
+  #pais,
+  #pais-label {
+    margin: 1.5%;
+  }
+
+  .Desplegable {
+    margin: 1%;
+  }
+
+  .Comentarios {
+    margin: 2% 0 0 0;
+  }
+
+  #submit {
+    width: 16vw;
+    height: 4vw;
+    font-size: 0.8rem;
+  }
+
+  /* --------- Aviso Legal + Privacidad -------------- */
+
+  .aviso_legal_pag,
+  .politica_pivacidad_pag,
+  .montaje_pag,
+  .galeria_pag {
+    width: 90%;
+    padding: 12% 5%;
+    line-height: 1.8;
+  }
+}
+
+/* -------------------- media query 479 (móvil) -------------------------   */
+
+@media screen and (max-width: 479px) {
+  html {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.6rem;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  #header,
+  nav {
+    height: 70px;
+  }
+
+  #header-img {
+    height: 20px;
+    margin: auto;
+  }
+
+  .nav-links {
+    top: 8vh;
+    width: 35%;
+    margin: 1% 8% 0 0;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  /* ------------ Presentación | Imagen principal con texto ------------- */
+
+  #presentacion {
+    padding: 15% 10% 0%;
+    flex-direction: column;
+  }
+
+  .intro-text {
+    margin: 10% 0 0 0;
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* ---------------------------- FIN ----------------------------------- */
+
+@media screen and (max-width: 560px) {
+  html {
+    font-size: 12.5px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 12px !important;
+  }
+
+  .slider .indicators {
+    &__item {
+      width: 5rem;
+      height: 1rem;
+    }
+  }
+}

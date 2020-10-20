@@ -1,0 +1,1106 @@
+$textcolor: rgb(150, 150, 150);
+$color1: rgba(170, 180, 8, 0.7);
+$color2: rgba(170, 180, 8, 1);
+$color2B: rgba(170, 180, 8, 0.3);
+$color3: rgba(85, 90, 4, 0.8);
+$bg-color: #fff;
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: $bg-color;
+}
+
+h1 {
+  margin: 2%;
+  line-height: 1.2;
+  font-size: 2rem;
+  color: $color3;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: $color1;
+  line-height: 1.5;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: $color2;
+}
+
+p {
+  font-size: 1rem;
+  color: rgb(150, 150, 150);
+  margin: 0;
+  font-weight: 300;
+}
+
+sub {
+  color: rgb(150, 150, 150);
+  z-index: -1;
+}
+
+a,
+a:hover,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: $textcolor;
+}
+
+/* ---------- Barra de navegador ------------- */
+
+#header {
+  width: 100%;
+  background-color: $bg-color;
+  height: 10vh;
+  align-items: center;
+  z-index: 1;
+  opacity: 0.92;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+  margin: 0 10% 0 10%;
+  color: $textcolor;
+}
+
+.nav-bar {
+  margin: 0 10% 0 10%;
+}
+
+#header-img {
+  height: 35px;
+  margin: auto;
+}
+
+.nav-links {
+  display: flex;
+  margin: 1% 2.5% 0 0;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 39%;
+  text-decoration: none;
+  color: $textcolor;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: $color1;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-item {
+  font-size: 1.1rem;
+  margin: 5%;
+}
+
+.nav-item a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.nav-item a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: $color1;
+  width: 0;
+  left: 50%;
+  bottom: -3px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+.nav-item a:hover:after {
+  width: 100%;
+}
+
+/* --------- Sección Producto principal --------------------- */
+
+#producto {
+  padding: 6% 5% 5%;
+}
+
+/* Datos ficha */
+
+.ficha_producto {
+  margin: 0 10%;
+  padding: 4% 4% 2%;
+  border-radius: 25px;
+  box-shadow: 1px 1px 10px rgba(165, 165, 165, 0.2);
+}
+
+.ficha_producto:hover {
+  box-shadow: 6px 6px 20px rgba(140, 140, 140, 0.5);
+}
+
+.ficha_imagen {
+  padding: 3%;
+  margin: auto;
+  text-align: center;
+}
+
+.ficha_imagen img {
+  width: 35%;
+  height: auto;
+}
+
+.ficha_texto {
+  margin: auto;
+  padding: 1% 5%;
+}
+
+.ficha_titulo {
+  padding: 0 4%;
+  text-align: center;
+}
+
+.ficha_cuerpo {
+  padding: 2% 4%;
+}
+
+.ficha_cuerpo p {
+  text-align: justify;
+  font-size: 1rem;
+  margin-right: 2%;
+}
+
+/* Apartado precio */
+
+.producto_precio {
+  text-align: center;
+  padding: 1% 0;
+}
+
+.producto_precio p {
+  font-size: 0.8rem;
+}
+
+.producto_txt {
+  text-align: center;
+}
+
+.ficha_precio {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.ficha_sub p {
+  padding: 1%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(191, 191, 191);
+}
+
+/* ------------ Formulario de pedido ------------- */
+
+#formulario_compra {
+  padding: 4% 0;
+  text-align: center;
+  color: $textcolor;
+  font-size: 1rem;
+}
+
+.titulo_formulario {
+  color: $color2;
+  padding-top: 2%;
+}
+
+.formulario {
+  padding: 1% 0;
+  text-align: center;
+}
+
+.Desplegable_pedido {
+  margin: auto;
+}
+
+#name,
+#name-label,
+#surname,
+#surname-label,
+#email,
+#email-label,
+#phone,
+#phone-label,
+#pais,
+#pais-label {
+  margin: 0.3%;
+}
+
+#email {
+  margin-left: 1.6%;
+}
+
+#phone {
+  margin-left: 0.6%;
+}
+
+#pais {
+  margin-left: 2.8%;
+}
+
+.Desplegable,
+.Desplegable_pedido {
+  margin: 1% 0 0 0;
+}
+
+#dropdown {
+  margin-left: 1.7%;
+}
+
+.Comentarios {
+  margin: 1% 0 0 0;
+}
+
+#Comentario {
+  margin: 0.5%;
+}
+
+/* ------  Sección Catálogo - Otros productos  --------  */
+
+.Catalogo {
+  width: 90%;
+  padding: 2% 0;
+  margin: auto;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.Catalogo_Cabecera {
+  margin: 2% 0;
+}
+
+.Catalogo_Linea {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1%;
+  flex-wrap: wrap;
+}
+
+.Tabla_Banco_C,
+.Tabla_Herrajes_B,
+.Tabla_Herrajes_S,
+.Tabla_Licencia {
+  flex: 1;
+  border-radius: 5%;
+  padding: 1%;
+  margin: 2% 6%;
+  max-width: 40%;
+  height: auto;
+  box-shadow: 1px 1px 10px rgba(165, 165, 165, 0.2);
+}
+
+.Tabla_Banco_C:hover,
+.Tabla_Herrajes_B:hover,
+.Tabla_Herrajes_S:hover,
+.Tabla_Licencia:hover {
+  box-shadow: 6px 6px 20px rgba(140, 140, 140, 0.5);
+}
+
+.Imagen_tabla img {
+  margin: 5% 4%;
+  width: 29vh;
+  height: auto;
+}
+
+.Contenido_tabla {
+  margin: 5% 2%;
+}
+
+.Titulo_tabla {
+  margin: 4% 0;
+}
+
+.Titulo_tabla h1 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: $color2;
+}
+
+.Contenido_tabla ul {
+  padding: 0;
+  margin: 3% 0;
+  list-style-type: none;
+  line-height: 2;
+  color: $textcolor;
+}
+
+.boton_enviar,
+.Boton_Banco_Caballeria,
+.Boton_Herrajes_B,
+.Boton_Herrajes_S,
+.Boton_Licencia {
+  margin: 6% 0;
+  border: 1px solid $color2B;
+  border-radius: 50px;
+  background: transparent;
+  color: $color1;
+  width: 12vw;
+  height: 2.5vw;
+  font-size: 1rem;
+  transition: all 0.4s ease 0s;
+}
+
+.boton_enviar:hover,
+.Boton_Banco_Caballeria:hover,
+.Boton_Herrajes_B:hover,
+.Boton_Herrajes_S:hover,
+.Boton_Licencia:hover {
+  background: $color1;
+  border-color: $color2B;
+  color: $bg-color;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+/* Footer */
+
+.container_footer {
+  background-color: $color1;
+  color: $bg-color;
+  padding: 1% 0 1.1%;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.Sitbasic {
+  padding: 1% 0 0;
+  margin-bottom: 0;
+}
+
+.container_footer p {
+  color: $bg-color;
+}
+
+.ft {
+  display: inline-block;
+  padding: 0 2%;
+  margin: auto;
+  color: $bg-color;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:link,
+.footer-links a:visited,
+.footer-links a:active {
+  text-decoration: none;
+  color: $bg-color;
+}
+
+.footer-links a:hover {
+  cursor: pointer;
+  color: $color3;
+}
+
+/* --------------------- Media queries --------------------------- */
+/* --------------------------------------------------------------- */
+
+/* ------------------ MEDIA QUERY 1600 ----------------------- */
+
+@media screen and (max-width: 1601px) {
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 17% 0 10%;
+  }
+}
+
+/* ------------------ MEDIA QUERY 1351 ----------------------- */
+
+@media screen and (max-width: 1351px) {
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 23% 0 10%;
+  }
+}
+
+/* -------------------- MEDIA QUERY 1280 -------------------------   */
+
+@media screen and (max-width: 1281px) {
+  html {
+    font-size: 15px !important;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  #header-img {
+    height: 32px;
+    margin: auto;
+  }
+
+  .nav-bar {
+    margin: 0 21% 0 10%;
+  }
+
+  /* ------------ Formulario de pedido ------------- */
+
+  #formulario_compra {
+    padding: 5% 0 2%;
+    text-align: center;
+    color: $textcolor;
+  }
+
+  .formulario {
+    padding: 0;
+  }
+
+  #name,
+  #name-label,
+  #surname,
+  #surname-label,
+  #email,
+  #email-label,
+  #phone,
+  #phone-label,
+  #pais,
+  #pais-label {
+    margin: 0.2%;
+  }
+
+  #email {
+    margin-left: 1.6%;
+  }
+
+  #phone {
+    margin-left: 0.6%;
+  }
+
+  #pais {
+    margin-left: 2.8%;
+  }
+
+  .Desplegable,
+  .Desplegable_pedido {
+    margin: 0.5% 0 0 0;
+  }
+
+  .Comentarios {
+    margin: 0.3% 0 0 0;
+  }
+
+  #submit {
+    margin: 0.5%;
+  }
+
+  .Titulo_tabla h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* -------------------- MEDIA QUERY 1068 -------------------------   */
+
+@media screen and (max-width: 1068px) {
+  html {
+    font-size: 14.5px !important;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 26% 0 10%;
+  }
+
+  #header-img {
+    height: 28px;
+    margin: auto;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    margin: 3% 0% 1% 10%;
+  }
+
+  /* --------- Sección Producto principal --------------------- */
+
+  #producto {
+    width: 80%;
+    padding: 14% 5% 5%;
+  }
+
+  .ficha_texto p {
+    font-size: 0.85rem;
+  }
+
+  /* ------------ Formulario de pedido ------------- */
+
+  #formulario_compra {
+    padding: 10% 0 5%;
+    text-align: center;
+    color: $textcolor;
+  }
+
+  .formulario {
+    padding: 2%;
+  }
+
+  #name,
+  #name-label,
+  #surname,
+  #surname-label,
+  #email,
+  #email-label,
+  #phone,
+  #phone-label,
+  #pais,
+  #pais-label {
+    margin: 0.3%;
+  }
+
+  #email {
+    margin-left: 1.9%;
+  }
+
+  #phone {
+    margin-left: 0.55%;
+  }
+
+  #pais {
+    margin-left: 3.4%;
+  }
+
+  .Desplegable,
+  .Desplegable_pedido {
+    margin: 1.5% 0 0 0;
+  }
+
+  #submit {
+    margin: 1%;
+    width: 20vw;
+    height: 4vw;
+  }
+
+  /* ------  Sección Catálogo - Otros productos  --------  */
+
+  .Catalogo {
+    padding: 5% 0;
+  }
+
+  .Catalogo_Cabecera {
+    margin: 3% 0;
+  }
+
+  .Catalogo_Linea {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1%;
+    flex-wrap: wrap;
+  }
+
+  .Imagen_tabla img {
+    margin: 5% 4%;
+    width: 25vh;
+    height: auto;
+  }
+
+  .Boton_Banco_Caballeria,
+  .Boton_Silla_Caballeria,
+  .Boton_Banco_Pino,
+  .Boton_Silla_Pino {
+    width: 17vw;
+    height: 3.5vw;
+    font-size: 1rem;
+    transition: all 0.4s ease 0s;
+  }
+}
+/* -------------------- MEDIA QUERY 991  -------------------------   */
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 14px !important;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 24% 0 10%;
+  }
+
+  #header-img {
+    height: 26px;
+    margin: auto;
+  }
+
+  .nav-links {
+    margin: 1% 8% 0 0;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    margin: 1% 1% 2% 10%;
+  }
+  /* --------- Sección Producto principal --------------------- */
+
+  #producto {
+    width: 80%;
+    padding: 8% 5% 5%;
+  }
+
+  .ficha_imagen img {
+    width: 65%;
+    height: auto;
+  }
+
+  .ficha_cuerpo {
+    padding: 2% 4%;
+  }
+
+  .ficha_titulo h1 {
+    margin: 1%;
+  }
+
+  /* ------------ Formulario de pedido ------------- */
+
+  #formulario_compra {
+    padding: 6% 0 2%;
+    text-align: center;
+    color: $textcolor;
+  }
+
+  .formulario {
+    padding: 0;
+  }
+
+  #name,
+  #name-label,
+  #surname,
+  #surname-label,
+  #email,
+  #email-label,
+  #phone,
+  #phone-label,
+  #pais,
+  #pais-label {
+    margin: 0.2%;
+  }
+
+  #email {
+    margin-left: 1.8%;
+  }
+
+  #phone {
+    margin-left: 0.6%;
+  }
+
+  #pais {
+    margin-left: 3.5%;
+  }
+
+  .Desplegable,
+  .Desplegable_pedido {
+    margin: 0.3% 0 0 0;
+  }
+
+  .Comentarios {
+    margin: 0;
+  }
+
+  #submit {
+    margin: 0.5%;
+  }
+
+  /* ------  Sección Catálogo - Otros productos  --------  */
+
+  .Catalogo {
+    padding: 2% 0;
+  }
+}
+
+/* --------------------- media query 850 --------------------------------- */
+
+@media screen and (max-width: 850px) {
+  /* ---------- Barra de navegador ------------- */
+
+  .nav-bar {
+    margin: 0 32% 0 10%;
+  }
+}
+
+/* -------------------- media query 769 (toggler) -------------------------   */
+
+@media screen and (max-width: 769px) {
+  html {
+    font-size: 14px !important;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.65rem;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+  #header {
+    height: 65px;
+  }
+
+  #header-img {
+    height: 22px;
+    margin: auto;
+  }
+
+  .nav-bar {
+    margin: 0 15% 0 10%;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 45vh;
+    top: 9vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    color: $textcolor;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    margin-right: -5vw;
+    padding-top: 5px;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .nav-item {
+    margin: 5%;
+  }
+
+  /* --------- Sección Producto principal --------------------- */
+
+  #producto {
+    width: 80%;
+    padding: 10% 5% 5%;
+  }
+
+  /* ------------ Formulario de pedido ------------- */
+
+  .formulario {
+    padding: 1% 0;
+    text-align: center;
+  }
+
+  #submit {
+    width: 20vw;
+    height: 4vw;
+  }
+
+  /* ------  Sección Catálogo - Otros productos  --------  */
+
+  .Catalogo {
+    width: 80%;
+  }
+
+  .Catalogo_Linea {
+    width: 60%;
+  }
+
+  .Tabla_Banco_C,
+  .Tabla_Silla_C,
+  .Tabla_Banco_P,
+  .Tabla_Silla_P {
+    margin: 3% 6%;
+    width: 30vh;
+  }
+
+  .Imagen_tabla img {
+    margin: 5%;
+    width: 25vh;
+  }
+
+  .Contenido_tabla {
+    margin: 3.5% 2%;
+  }
+
+  .Titulo_tabla {
+    margin: 3% 0;
+  }
+
+  .Boton_Banco_Caballeria,
+  .Boton_Silla_Caballeria,
+  .Boton_Banco_Pino,
+  .Boton_Silla_Pino {
+    margin: 4% 0;
+    width: 16vw;
+    height: 4vw;
+    font-size: 1rem;
+  }
+}
+
+/* -------------------- media query 479 (móvil) -------------------------   */
+
+@media screen and (max-width: 479px) {
+  html {
+    font-size: 13px !important;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.6rem;
+  }
+
+  /* ---------- Barra de navegador ------------- */
+
+  #header {
+    height: 70px;
+  }
+
+  #header-img {
+    height: 20px;
+    margin: auto;
+  }
+
+  .nav-links {
+    top: 8vh;
+    width: 35%;
+    margin: 1% 5% 0 0;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+  /* --------- Sección Producto principal --------------------- */
+
+  #producto {
+    width: 90%;
+    padding: 20% 5% 5%;
+  }
+
+  .ficha_producto {
+    padding: 3%;
+  }
+
+  .ficha_imagen img {
+    width: 65%;
+    height: auto;
+  }
+
+  .ficha_cuerpo {
+    padding: 2% 8%;
+  }
+
+  .ficha_precio {
+    font-size: 1.6rem;
+  }
+
+  /* ------------ Formulario de pedido ------------- */
+
+  #formulario_compra {
+    padding: 15% 8% 8%;
+    text-align: center;
+    color: $textcolor;
+  }
+
+  .formulario {
+    padding: 3%;
+  }
+
+  #name,
+  #name-label,
+  #surname,
+  #surname-label,
+  #email,
+  #email-label,
+  #phone,
+  #phone-label,
+  #pais,
+  #pais-label {
+    margin: 0.5%;
+  }
+
+  #email {
+    margin-left: 5%;
+  }
+
+  #phone {
+    margin-left: 1.6%;
+  }
+
+  #pais {
+    margin-left: 9.5%;
+  }
+
+  .Desplegable,
+  .Desplegable_pedido {
+    margin: 2% 0 0 0;
+  }
+
+  .Comentarios {
+    margin: 1%;
+  }
+
+  #submit {
+    margin: 3%;
+    width: 45vw;
+    height: 9vw;
+  }
+
+  /* ------  Sección Catálogo - Otros productos  --------  */
+
+  #Catalogo {
+    width: 90%;
+    padding: 12% 10% 6%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .Catalogo_Linea {
+    width: 95%;
+  }
+
+  .Cabecera_Catalogo {
+    padding: 0;
+  }
+
+  .Tabla_Banco_C,
+  .Tabla_Silla_C,
+  .Tabla_Banco_P,
+  .Tabla_Silla_P {
+    flex: 1;
+    border-radius: 5%;
+    padding: 3%;
+    margin: 1.5%;
+    width: 28vh;
+    height: auto;
+    box-shadow: 1px 1px 10px rgba(165, 165, 165, 0.2);
+  }
+
+  .Imagen_tabla img {
+    margin: 5%;
+    width: 22vh;
+  }
+
+  .Contenido_tabla {
+    margin: 3.5% 2%;
+  }
+
+  .Titulo_tabla {
+    margin: 2% 0;
+  }
+
+  .Titulo_tabla h1 {
+    margin: 1.5%;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: $color2;
+    font-weight: 800;
+  }
+
+  .Contenido_tabla ul {
+    margin: 1% 0;
+    line-height: 1.5;
+    font-size: 0.8rem;
+  }
+
+  .Boton_Banco_Caballeria,
+  .Boton_Silla_Caballeria,
+  .Boton_Banco_Pino,
+  .Boton_Silla_Pino {
+    margin: 4% 0 2%;
+    width: 35vw;
+    height: 7vw;
+    font-size: 0.8rem;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ---------------------------- FIN ----------------------------------- */
