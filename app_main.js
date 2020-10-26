@@ -54,7 +54,7 @@ var getElement = {
 };
 var prop = {
     id: 0,
-    slideTime: 5000,
+    slideTime: 6000,
     autoSlide: true
 };
 var autoPlayInterval = void 0;
@@ -98,43 +98,88 @@ function changeIndicator(id) {
 }
 
 function autoPlay() {
-    if (prop.autoSlide) {
-        autoPlayInterval = setInterval(function () {
-            changeSlide(1);
-        }, prop.slideTime);
-    }
+  if (prop.autoSlide) {
+      autoPlayInterval = setInterval(function () {
+          changeSlide(1);
+      }, prop.slideTime);
+  }
 }
 
+const video = document.getElementById("video1");
+const galeria = document.getElementById("galeria");
+
 function stopAutoPlay() {
-    document.getElementById("galeria").addEventListener("mouseenter", function () {
-        clearInterval(autoPlayInterval);
-    });
-    document.getElementById("galeria").addEventListener("mouseleave", function () {
-        autoPlay();
-    });
+  galeria.addEventListener("mouseenter", function () {
+    clearInterval(autoPlayInterval);
+  });
+  galeria.addEventListener("mouseleave", function () {
+    autoPlay();
+  });
+  video.addEventListener("play", function () {
+    prop.autoSlide = false;
+  });
+  video.addEventListener("ended", function () {
+    autoPlay();
+  });
 }
 
 function clickIndicator() {
-    getElement.indicators.forEach(function (indicator) {
-        indicator.addEventListener("click", function (e) {
-            reset("indicators", "active");
-            e.target.classList.add("active");
-            var currIndicator = e.target.dataset.slideTo * 1;
-            prop.id = currIndicator;
-            addClass(currIndicator);
-        });
+  getElement.indicators.forEach(function (indicator) {
+    indicator.addEventListener("click", function (e) {
+      reset("indicators", "active");
+      e.target.classList.add("active");
+      var currIndicator = e.target.dataset.slideTo * 1;
+      prop.id = currIndicator;
+      addClass(currIndicator);
     });
+  });
 };
 
 init(prop.id);
 
 getElement.nextBtn.addEventListener("click", function () {
-    changeSlide(1);
+  changeSlide(1);
+  video.load()
 });
 getElement.prevBtn.addEventListener("click", function () {
-    changeSlide(-1);
+  changeSlide(-1);
+  video.load()
 });
 
+
+/* Comprueba cuando el slider se ve en la pantalla. */
+var myElement = document.getElementById('galeria');
+var bounding = myElement.getBoundingClientRect();
+
+function elementInViewport() {
+  var bounding = myElement.getBoundingClientRect();
+  if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+/* Para el vídeo cuando no está en pantalla y activa el slider */
+video.onplaying = function () {
+  window.addEventListener("scroll", function () {
+    if (!elementInViewport()) {
+      video.pause()
+    } else if (elementInViewport()) {
+      video.play()
+    }
+  })
+};
+
+// function setPause() {
+//   if (video.pause()) {
+//     console.log("PAUSA");
+//   } else if (video.play()) {
+//     console.log("REPRODUCIENDO")
+//   }
+// }
+
+// setPause();
 
 /* Seguridad, delay en el botón de enviar del formulario */
 
@@ -155,26 +200,4 @@ form.addEventListener('keydown', function () {
     console.log('ya está el botón activo');
 })
 
-// botonEnviar.addEventListener('click', () => {
-//     console.log('se pulsa botón');
-// })
-
 /* Seguridad, si en el texto del comentario hay una web no entra */
-
-
-/*
-/ * Stop an iframe or HTML5 <video> from playing
-/ * @param  {Element} element The element that contains the video
- 
-var stopVideo = function (element) {
-    var iframe = element.querySelector('iframe');
-    var video = element.querySelector('video');
-    if (iframe) {
-        var iframeSrc = iframe.src;
-        iframe.src = iframeSrc;
-    }
-    if (video) {
-        video.pause();
-    }
-};
-*/

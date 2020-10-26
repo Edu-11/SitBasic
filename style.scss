@@ -324,7 +324,7 @@ nav {
     left: 0;
     right: 0;
     margin: 0 auto;
-    top: 68%;
+    top: 82%;
     -webkit-transform: translateY(50%);
     -ms-transform: translateY(50%);
     transform: translateY(50%);
@@ -369,12 +369,12 @@ nav {
     -ms-flex-pack: center;
     justify-content: center;
     position: absolute;
-    bottom: 2rem;
+    bottom: 5%;
 }
 
 .indicators__item {
     display: block;
-    width: 3rem;
+    width: 2.5rem;
     height: 0.5rem;
     background: rgba(95, 95, 95, 0.5);
     -webkit-transition: 0.5s;

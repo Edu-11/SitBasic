@@ -82,30 +82,24 @@
                         src="./images/SitBasic_02_Slider1.jpg"
                         alt="slider-0">
                     <div class="slide__caption">
-                        <span class="slide__caption--title">Slide 1</span>
-                        <span class="slide__caption--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ipsam assumenda nostrum quisquam voluptatem consectetur dolore, necessitatibus doloribus
-                            temporibus.</span>
+                        <!-- <span class="slide__caption--title">Slide 1</span> -->
+                        <span class="slide__caption--text">Ideal para interior o exterior por su resistencia y durabilidad</span>
                     </div>
                 </div>
                 <div id="slide" class="slide" data-slide-id="1">
                     <img class="slide__img" src="./images/SitBasic_03_Slider2.jpg"
                         alt="slider-1">
                     <div class="slide__caption">
-                        <span class="slide__caption--title">Slide 2</span>
-                        <span class="slide__caption--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ipsam assumenda nostrum quisquam voluptatem consectetur dolore, necessitatibus doloribus
-                            temporibus.</span>
+                        <!-- <span class="slide__caption--title">Slide 2</span> -->
+                        <span class="slide__caption--text">Personalizable para adaptarse a tu estilo y regulable para distintos usos.</span>
                     </div>
                 </div>
                 <div id="slide" class="slide" data-slide-id="2">
                     <img class="slide__img" src="./images/SitBasic_04_Slider3.jpg"
                         alt="slider-2">
                     <div class="slide__caption">
-                        <span class="slide__caption--title">Slide 3</span>
-                        <span class="slide__caption--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ipsam assumenda nostrum quisquam voluptatem consectetur dolore, necessitatibus doloribus
-                            temporibus.</span>
+                        <!-- <span class="slide__caption--title">Slide 3</span> -->
+                        <span class="slide__caption--text">Útil y práctico. Fácil de plegar, transportar y desplegar por una persona.</span>
                     </div>
                 </div>
                 <div id="slide" class="slide" data-slide-id="3">
@@ -114,10 +108,8 @@
                         Tu navegador no soporta video en HTML5.
                     </video>
                     <div class="slide__caption">
-                        <span class="slide__caption--title">Slide 4</span>
-                        <span class="slide__caption--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ipsam assumenda nostrum quisquam voluptatem consectetur dolore, necessitatibus doloribus
-                            temporibus.</span>
+                        <!-- <span class="slide__caption--title">Slide 4</span> -->
+                        <span class="slide__caption--text texto-video">Un estupendo proyecto para los aficionados al bricolaje.</span>
                     </div>
                 </div>
             </div>
@@ -548,7 +540,7 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app_main.js"></script>
 
 </body>
 
