@@ -1,9 +1,5 @@
 @charset "UTF-8";
 html {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   font-size: 17px;
   line-height: normal;
   scroll-behavior: smooth;
@@ -12,6 +8,10 @@ html {
 body {
   font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
   background-color: #fff;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h3 {
@@ -21,7 +21,7 @@ h3 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #969696;
   font-weight: 300;
 }
@@ -72,7 +72,7 @@ nav {
 
 #header-img {
   height: 35px;
-  margin: auto;
+  margin: 10% 0 0 0;
 }
 
 .nav-links {
@@ -143,20 +143,30 @@ nav {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
-  padding: 12% 10% 10% 10%;
+  padding: 5% 10%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   scroll-behavior: smooth;
   z-index: 0;
+}
+
+.cabecera_galeria {
+  width: 100%;
+  padding: 2%;
+}
+
+.Pie-de-foto {
+  margin: 0 0 3%;
+  text-align: center;
 }
 
 .aviso_legal_pag h3,
@@ -185,7 +195,7 @@ nav {
 }
 
 .Sitbasic {
-  padding: 1% 0 0;
+  padding: 1% 0;
   margin-bottom: 0;
 }
 
@@ -195,7 +205,7 @@ nav {
 
 .ft {
   display: inline-block;
-  padding: 0 2%;
+  padding: 2% 0 1%;
   margin: auto;
   color: #fff;
 }
@@ -211,16 +221,6 @@ nav {
 .footer-links a:hover {
   cursor: pointer;
   color: rgba(85, 90, 4, 0.8);
-}
-
-/* Aviso legal + Política de privacidad */
-.aviso_legal_pag h3,
-.pedido_realizado h3,
-.montaje_pag h3,
-.galeria_pag h3 {
-  margin: 2% 5%;
-  text-align: center;
-  color: rgba(170, 180, 8, 0.7);
 }
 
 /* --------------------- Media queries ------------------------------------------------ */
@@ -248,8 +248,8 @@ nav {
   }
   /* ---------- Barra de navegador ------------- */
   #header-img {
-    height: 32px;
-    margin: auto;
+    height: 30px;
+    margin: 10% 0 0 0;
   }
   .nav-bar {
     margin: 0 21% 0 10%;
@@ -262,7 +262,7 @@ nav {
     font-size: 14.5px;
   }
   p {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   /* ---------- Barra de navegador ------------- */
   .nav-bar {
@@ -270,7 +270,7 @@ nav {
   }
   #header-img {
     height: 28px;
-    margin: auto;
+    margin: 10% 0 0 0;
   }
   .nav-item {
     font-size: 1rem;
@@ -281,7 +281,7 @@ nav {
   .aviso_legal_pag,
   .montaje_pag,
   .galeria_pag {
-    padding: 10%;
+    padding: 5% 10%;
   }
   .cover {
     width: 50%;

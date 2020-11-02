@@ -48,9 +48,9 @@ var getElement = {
     currentSlide: document.querySelector(".slide.current"),
     nextBtn: document.querySelector(".slider__btn--next"),
     prevBtn: document.querySelector(".slider__btn--prev"),
-    indicators: [].concat(
-        _toConsumableArray(document.querySelectorAll(".indicators__item"))
-    )
+    // indicators: [].concat(
+    //     _toConsumableArray(document.querySelectorAll(".indicators__item"))
+    // )
 };
 var prop = {
     id: 0,
@@ -61,8 +61,8 @@ var autoPlayInterval = void 0;
 
 function init(id) {
     addClass(id);
-    changeIndicator(id);
-    clickIndicator();
+    // changeIndicator(id);
+    // clickIndicator();
     autoPlay();
     stopAutoPlay();
 }
@@ -92,10 +92,10 @@ function changeSlide(num) {
     changeIndicator(currentSlide);
 }
 
-function changeIndicator(id) {
-    reset("indicators", "active");
-    getElement.indicators[id].classList.add("active");
-}
+// function changeIndicator(id) {
+//     reset("indicators", "active");
+//     getElement.indicators[id].classList.add("active");
+// }
 
 function autoPlay() {
   if (prop.autoSlide) {
@@ -123,17 +123,17 @@ function stopAutoPlay() {
   });
 }
 
-function clickIndicator() {
-  getElement.indicators.forEach(function (indicator) {
-    indicator.addEventListener("click", function (e) {
-      reset("indicators", "active");
-      e.target.classList.add("active");
-      var currIndicator = e.target.dataset.slideTo * 1;
-      prop.id = currIndicator;
-      addClass(currIndicator);
-    });
-  });
-};
+// function clickIndicator() {
+//   getElement.indicators.forEach(function (indicator) {
+//     indicator.addEventListener("click", function (e) {
+//       reset("indicators", "active");
+//       e.target.classList.add("active");
+//       var currIndicator = e.target.dataset.slideTo * 1;
+//       prop.id = currIndicator;
+//       addClass(currIndicator);
+//     });
+//   });
+// };
 
 init(prop.id);
 

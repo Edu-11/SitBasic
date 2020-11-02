@@ -67,7 +67,7 @@
                     <a class="Boton_cta_diseño" href="#Disegno"><button class="boton boton-diseño">Ver
                             Diseño</button></a>
                     <a class="Boton_cta_catalogo" href="#Catalogo"><button
-                            class="boton boton-comprar">Comprar</button></a>
+                            class="boton boton-ver-producto">Ver Productos</button></a>
                 </div>
             </div>
             <div class="cover">
@@ -83,7 +83,7 @@
                         alt="slider-0">
                     <div class="slide__caption">
                         <!-- <span class="slide__caption--title">Slide 1</span> -->
-                        <span class="slide__caption--text">Ideal para interior o exterior por su resistencia y durabilidad</span>
+                        <span class="slide__caption--text">Ideal para interior o exterior por su resistencia y durabilidad. <a href="./galeria.html">Ver más</a></span>
                     </div>
                 </div>
                 <div id="slide" class="slide" data-slide-id="1">
@@ -91,7 +91,7 @@
                         alt="slider-1">
                     <div class="slide__caption">
                         <!-- <span class="slide__caption--title">Slide 2</span> -->
-                        <span class="slide__caption--text">Personalizable para adaptarse a tu estilo y regulable para distintos usos.</span>
+                        <span class="slide__caption--text">Personalizable para adaptarse a tu estilo y regulable para distintos usos. <a href="./galeria.html">Ver más</a></span>
                     </div>
                 </div>
                 <div id="slide" class="slide" data-slide-id="2">
@@ -99,7 +99,7 @@
                         alt="slider-2">
                     <div class="slide__caption">
                         <!-- <span class="slide__caption--title">Slide 3</span> -->
-                        <span class="slide__caption--text">Útil y práctico. Fácil de plegar, transportar y desplegar por una persona.</span>
+                        <span class="slide__caption--text">Útil y práctico. Fácil de plegar, transportar y desplegar por una persona. <a href="./galeria.html">Ver más</a></span>
                     </div>
                 </div>
                 <div id="slide" class="slide" data-slide-id="3">
@@ -109,7 +109,7 @@
                     </video>
                     <div class="slide__caption">
                         <!-- <span class="slide__caption--title">Slide 4</span> -->
-                        <span class="slide__caption--text texto-video">Un estupendo proyecto para los aficionados al bricolaje.</span>
+                        <span class="slide__caption--text texto-video">Un estupendo proyecto para los aficionados al bricolaje. <a href="./galeria.html">Ver más</a></span>
                     </div>
                 </div>
             </div>
@@ -245,7 +245,7 @@
                               <input type="hidden" name="SitBasic_PedidoSector02" value="SB100H6Z2NCB140I27ALI" />
                               <input type="hidden" name="SitBasic_PedidoPrecio" value="619" />
                               <input type="hidden" name="SitBasic_PedidoReferenciaLarga" value="BANCO CABALLER&Iacute;A plegable, madera IROCO " />
-                              <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_BancoCaballeria.php" class="Boton_Banco_Caballeria" value="Comprar" />
+                              <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_BancoCaballeria.php" class="Boton_Banco_C" value="Ver producto" />
                         </form>
                     </div>
                 </div>
@@ -302,7 +302,7 @@
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="215" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga" value="MECANISMO plegable SITBASIC de hierro natural para banco de 120 a 160 cms de ancho" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_MecanismoBanco.php"
-                            class="Boton_Herrajes_B" value="Comprar" />
+                            class="Boton_Herrajes_B" value="Ver producto" />
                         </form>
                     </div>
                 </div>
@@ -360,7 +360,7 @@
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga"
                             value="MECANISMO plegable SITBASIC de hierro natural para SILLA de 45 cms de ancho" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_MecanismoSilla.php" class="Boton_Herrajes_S"
-                            value="Comprar" />
+                            value="Ver producto" />
                         </form>
                     </div>
                 </div>
@@ -417,7 +417,7 @@
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga"
                             value="PLANO Y LICENCIA Sitbasic Plegable" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_Licencia.php" class="Boton_Herrajes_S"
-                            value="Comprar" />
+                            value="Ver producto" />
                         </form>        
                     </div>
                 </div>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sitbasic | Banco de Caballeria</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,800&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="/style_producto.css">
+
+    <!----- Favicon ------>
+
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/images/IconoSitBasic.ico" sizes="16x16 32x32">
+
+</head>
+
+<body>
+    <header id="header" class="sticky">
+        <nav class="nav-bar">
+            <a class="navbar-brand" href="index.html"><img id="header-img" src="./images/LogoSitBasicOK.png"
+                    type="image/png" alt="logo" /></a>
+
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html#Galeria">GALERÍA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#Disegno">DISEÑO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#Catalogo">CATÁLOGO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#Contacto">CONTACTO</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section id="producto" class="container-fluid producto_Banco_Caballeria">
+            <a data-smooth class="link_formulario" href="#formulario_compra">
+                <div class="ficha_producto">
+                    <div class="row ficha_producto_Banco_Caballeria">
+                        <div class="col-lg-6 col-md-12 col-sm-12 ficha_imagen">
+                            <img class="imgen_banco_caballeria" src="/images/Banco Caballería.jpg"
+                                alt="Banco de Caballeria">
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 ficha_texto">
+                            <div class="ficha_titulo">
+                                <h1>Banco de Caballería</h1>
+                            </div>
+                            <div class="ficha_cuerpo">
+                                <p> Acabado circular en sus extremos con un ancho de 140 cms que incluye el mecanismo
+                                    plegable SitBasic de hierro zincado negro y madera de IROCO acabada con aceite de
+                                    linaza. Apto para tres personas. Soporta un peso de unos 300 kilos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="producto_precio">
+                        <h2 class="ficha_precio">619 €</h2>
+                        <p class="ficha_iva">(IVA incluido)</p>
+                        <div class="producto_txt">
+                            <div class="ficha_sub">
+                                <p>Para realizar el pedido rellene el formulario a continuación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <section id="formulario_compra">
+            <h2 class="titulo_formulario">Formulario de pedido</h2>
+            <p class="ficha_instrucciones">
+                Los gastos de envío no están incluidos en el precio.
+                <br>
+                Puede añadir otros productos en el mismo pedido, indicándolo en la casilla de comentario.
+                <br>
+                <b>Después de confirmar pedido, consulte el buzón de correo electrónico, recibirá e-mail con
+                    la información del pedido
+                    para finalizar su compra.</b>
+            </p>
+            <form id="form" class="formulario" action="">
+                <!-- Datos principales -->
+                <div class="Intro_datos">
+                    <label id="name-label" for="name">*Nombre</label>
+                    <input id="name" type="text" name="name" placeholder="Escribe tu nombre" required=""><br>
+                    <label id="surname-label" for="surname">*Apellido</label>
+                    <input id="surname" type="text" name="surname" placeholder="Escribe tu apellido" required=""><br>
+                    <label id="email-label" for="email">*Email</label>
+                    <input id="email" type="email" name="email" placeholder="Escribe un correo válido" required=""><br>
+                    <label id="phone-label" for="phone">Teléfono</label>
+                    <input id="phone" type="text" name="phone" placeholder="Escribe tu número de móvil" required=""><br>
+                    <label id="pais-label" for="país">País</label>
+                    <input id="pais" type="text" name="país" placeholder="País"><br>
+                </div>
+                <!-- Desplegable cantidad-->
+                <div class="Desplegable_pedido">
+                    <label id="desplegable_pedido" for="unidades">Unidades </label>
+                    <select id="dropdown_unidades" name="Desplegable_pedido">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <!-- Comentarios -->
+                <div class="Comentarios">
+                    <label for="Comentarios" class="titulo_comentarios">
+                    </label>
+                    <textarea id="Comentario" class="input-field" name="Comentarios"
+                        placeholder="Dinos si tienes algún comentario o sugerencia.." rows="10" cols="40"></textarea>
+                </div>
+                <!-- Botón de envío-->
+                <div class="boton_enviar">
+                    <input id="submit" type="submit" value="Confirmar pedido"></input>
+                </div>
+                </div>
+            </form>
+        </section>
+
+        <section id="Catalogo" class="Catalogo">
+            <div class="Catalogo_Cabecera">
+                <h2 class="titular_cat">Otros Productos</h2>
+            </div>
+            <div class="Catalogo_Linea">
+                <div class="Tabla_Herrajes_B">
+                    <div class="Imagen_tabla">
+                        <img src="./images/Herrajes_Banco.jpg" />
+                    </div>
+                    <div class="Contenido_tabla">
+                        <div class="Titulo_tabla">
+                            <h1>Mecanismo para Banco Plegable</h1>
+                        </div>
+                        <ul>
+                            <li>Estructura plegable de hierro natural</li>
+                            <li>Ancho de 100 cm.</li>
+                            <li>Para Bancos de entre 120 y 160 cm. de ancho</li>
+                            <li>Para anchuras menores, se puede cortar tubos y varillas a medida</li>
+                        </ul>
+                        <div class="Boton_Comprar">
+                            <a href="/producto_MecanismoBanco.html">
+                                <button class="Boton_Herrajes_B">Comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="Tabla_Herrajes_S">
+                    <div class="Imagen_tabla">
+                        <img src="./images/Herrajes_Silla.jpg" />
+                    </div>
+                    <div class="Contenido_tabla">
+                        <div class="Titulo_tabla">
+                            <h1>Mecanismo para Silla Plegable</h1>
+                        </div>
+                        <ul>
+                            <li>Estructura plegable de hierro natural</li>
+                            <li>Ancho de 30 cm.</li>
+                            <li>Para Silla de entre 40 y 60 cm. de ancho</li>
+                        </ul>
+                        <div class="Boton_Comprar">
+                            <a href="/producto_MecanismoSilla.html">
+                                <button class="Boton_Herrajes_S">Comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container_footer">
+            <div class="footer-links">
+                <a class="aviso-legal ft" href="/aviso_legal.html">Aviso Legal</a>
+            </div>
+            <div class="Sitbasic">
+                <p class="empresa_footer">&reg; Sitbasic 2020. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

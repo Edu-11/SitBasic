@@ -6,17 +6,17 @@ $color3: rgba(85, 90, 4, 0.8);
 $bg-color: #fff;
 
 html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-size: 17px;
   line-height: normal;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
   background-color: $bg-color;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -92,7 +92,7 @@ nav {
 
 #header-img {
   height: 35px;
-  margin: auto;
+  margin: 10% 0 0 0;
 }
 
 .nav-links {
@@ -230,7 +230,7 @@ nav {
 /* ------------ Formulario de pedido ------------- */
 
 #formulario_compra {
-  padding: 4% 0;
+  padding: 6% 0 5%;
   text-align: center;
   color: $textcolor;
   font-size: 1rem;
@@ -260,11 +260,12 @@ nav {
 #phone-label,
 #pais,
 #pais-label {
-  margin: 0.3%;
+  margin: .3rem;
+  padding: .3rem;
 }
 
 #email {
-  margin-left: 1.6%;
+  margin-left: 1.4%;
 }
 
 #phone {
@@ -272,29 +273,53 @@ nav {
 }
 
 #pais {
-  margin-left: 2.8%;
+  margin-left: 2.4%;
 }
 
-.Desplegable,
-.Desplegable_pedido {
-  margin: 1% 0 0 0;
+#dropdown_unidades {
+  margin-left: 1%;
 }
 
-#dropdown {
-  margin-left: 1.7%;
+input, 
+select,
+textarea {
+  font-size: .9rem;
+  color: rgb(175, 175, 175);
+  margin: .35rem;
+  padding: .2rem .5rem;
 }
 
-.Comentarios {
-  margin: 1% 0 0 0;
+select {
+  padding: .3rem .5rem;
 }
 
-#Comentario {
-  margin: 0.5%;
+textarea {
+  margin:  0.5rem;
+}
+
+#submit {
+  border: 1px solid $color2;
+  border-radius: 50px;
+  background: transparent;
+  color: $color1;
+  width: 16vw;
+  height: 3vw;
+  font-size: 1rem;
+  padding: .5rem .6rem;
+  margin: .5rem;
+}
+
+#submit:hover {
+  background: $color1;
+  border-color: $color2B;
+  color: $bg-color;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
 }
 
 /* ------  Sección Catálogo - Otros productos  --------  */
 
-.Catalogo {
+#Catalogo {
   width: 90%;
   padding: 2% 0;
   margin: auto;
@@ -306,12 +331,19 @@ nav {
   margin: 2% 0;
 }
 
+.Catalogo_Cabecera {
+  color: $color2 !important;
+  font-weight: 600;
+}
+
 .Catalogo_Linea {
   display: flex;
-  width: 70%;
+  width: 95%;
   margin: auto;
   margin-bottom: 1%;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .Tabla_Banco_C,
@@ -322,7 +354,8 @@ nav {
   border-radius: 5%;
   padding: 1%;
   margin: 2% 6%;
-  max-width: 40%;
+  min-width: 30%;
+  max-width: 35%;
   height: auto;
   box-shadow: 1px 1px 10px rgba(165, 165, 165, 0.2);
 }
@@ -335,8 +368,8 @@ nav {
 }
 
 .Imagen_tabla img {
-  margin: 5% 4%;
-  width: 29vh;
+  margin: 6%;
+  width: 30vh;
   height: auto;
 }
 
@@ -349,25 +382,25 @@ nav {
 }
 
 .Titulo_tabla h1 {
-  font-size: 1.4rem;
+  margin: 2%;
+  font-size: 1.2rem;
   line-height: 1.4;
   color: $color2;
 }
 
 .Contenido_tabla ul {
-  padding: 0;
+  padding: 0 3%;
   margin: 3% 0;
   list-style-type: none;
   line-height: 2;
   color: $textcolor;
 }
 
-.boton_enviar,
 .Boton_Banco_Caballeria,
 .Boton_Herrajes_B,
 .Boton_Herrajes_S,
 .Boton_Licencia {
-  margin: 6% 0;
+  margin: 10% 0 6%;
   border: 1px solid $color2B;
   border-radius: 50px;
   background: transparent;
@@ -378,7 +411,6 @@ nav {
   transition: all 0.4s ease 0s;
 }
 
-.boton_enviar:hover,
 .Boton_Banco_Caballeria:hover,
 .Boton_Herrajes_B:hover,
 .Boton_Herrajes_S:hover,
@@ -392,16 +424,21 @@ nav {
 
 /* Footer */
 
+#footer {
+  width: 100%;
+}
+
 .container_footer {
   background-color: $color1;
   color: $bg-color;
-  padding: 1% 0 1.1%;
+  padding: .5rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 .Sitbasic {
-  padding: 1% 0 0;
+  padding: 1.1rem 0;
   margin-bottom: 0;
 }
 
@@ -411,10 +448,9 @@ nav {
 
 .ft {
   display: inline-block;
-  padding: 0 2%;
+  padding: 2% 0 1%;
   margin: auto;
   color: $bg-color;
-  text-decoration: none;
 }
 
 .footer-links a:hover,
@@ -457,14 +493,14 @@ nav {
 
 @media screen and (max-width: 1281px) {
   html {
-    font-size: 15px !important;
+    font-size: 15px;
   }
 
   /* ---------- Barra de navegador ------------- */
 
   #header-img {
-    height: 32px;
-    margin: auto;
+    height: 30px;
+    margin: 10% 0 0 0;
   }
 
   .nav-bar {
@@ -483,47 +519,10 @@ nav {
     padding: 0;
   }
 
-  #name,
-  #name-label,
-  #surname,
-  #surname-label,
-  #email,
-  #email-label,
-  #phone,
-  #phone-label,
-  #pais,
-  #pais-label {
-    margin: 0.2%;
-  }
-
-  #email {
-    margin-left: 1.6%;
-  }
-
-  #phone {
-    margin-left: 0.6%;
-  }
-
-  #pais {
-    margin-left: 2.8%;
-  }
-
-  .Desplegable,
-  .Desplegable_pedido {
-    margin: 0.5% 0 0 0;
-  }
-
-  .Comentarios {
-    margin: 0.3% 0 0 0;
-  }
-
   #submit {
-    margin: 0.5%;
+    margin: 2%;
   }
 
-  .Titulo_tabla h1 {
-    font-size: 1.4rem;
-  }
 }
 
 /* -------------------- MEDIA QUERY 1068 -------------------------   */

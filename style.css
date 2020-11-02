@@ -199,7 +199,7 @@ nav {
 }
 
 .boton-diseño,
-.boton-comprar {
+.boton-ver-producto {
   margin: 2% 2% 5% 0;
   border: 1px solid rgba(170, 180, 8, 0.7);
   border-radius: 50px;
@@ -212,16 +212,16 @@ nav {
   transition: all 0.4s ease 0s;
 }
 
-.boton-comprar {
+.boton-ver-producto {
   background-color: rgba(170, 180, 8, 0.7);
   color: #fff;
   border-color: rgba(170, 180, 8, 0.3);
 }
 
-.boton-comprar:hover {
+.boton-ver-producto:hover {
   background: rgba(85, 90, 4, 0.8);
   color: #fff;
-  border: 1px solid #aab408;
+  border: 1px solid rgba(170, 180, 8, 0.3);
 }
 
 .boton-diseño:hover {
@@ -250,15 +250,10 @@ nav {
 }
 
 /* -------------------- Galería de Fotos | Testimoniales ---------------- */
-#galeria {
-  padding: 5% 0 0 0;
-  margin: auto;
-  background-color: #fff;
-}
-
 .galeria {
   padding: 5% 0 0 0;
-  width: 90%;
+  width: 80%;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   margin: auto;
@@ -267,6 +262,70 @@ nav {
 .video {
   width: 100%;
   height: auto;
+}
+
+.slides {
+  width: 100%;
+  position: relative;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  display: none;
+  background-color: black;
+}
+
+.slide.current {
+  display: block;
+  -webkit-animation: fade 1.2s ease-out;
+  animation: fade 1.2s ease-out;
+}
+
+.slide__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slide__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 90%;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  max-width: 65%;
+  text-shadow: 0px 0px 4px #757575;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slide__caption--text {
+  font-size: 1.2rem;
+}
+
+.slide__caption--text a {
+  color: #c6cc5c;
+}
+
+.slide__caption--text a:hover {
+  color: #faffa1;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .slider__btn {
@@ -307,114 +366,12 @@ nav {
   cursor: pointer;
 }
 
-.slides {
-  width: 100%;
-  position: relative;
-}
-
-.slide {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-height: 85vh;
-  display: none;
-  background-color: black;
-}
-
-.slide.current {
-  display: block;
-  -webkit-animation: fade 1s ease;
-  animation: fade 1s ease;
-}
-
-.slide__img {
-  display: block;
-  width: 100%;
-  height: auto;
-  text-align: center;
-}
-
-.slide__caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 82%;
-  -webkit-transform: translateY(50%);
-  transform: translateY(50%);
-  max-width: 60%;
-  text-shadow: 0px 0px 4px #757575;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-}
-
-.slide__caption--title {
-  font-size: 1.6rem;
-}
-
-.slide__caption--text {
-  font-size: 1.2rem;
-}
-
-.indicators {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.indicators__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 5%;
-}
-
-.indicators__item {
-  display: block;
-  width: 2.5rem;
-  height: 0.5rem;
-  background: rgba(95, 95, 95, 0.5);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.indicators__item:hover {
-  -webkit-box-shadow: 0 0 .6px #888888;
-  box-shadow: 0 0 .6px #888888;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-}
-
-.indicators__item.active {
-  background: #ffffff;
-  -webkit-box-shadow: 0 0 1px #505050;
-  box-shadow: 0 0 1px #505050;
-}
-
-.indicators__item:not(:last-child) {
-  margin-right: 1rem;
-}
-
 @-webkit-keyframes fade {
   0% {
-    opacity: 0.4;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
@@ -423,7 +380,10 @@ nav {
 
 @keyframes fade {
   0% {
-    opacity: 0.4;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
@@ -435,7 +395,7 @@ nav {
   margin-top: 5px;
   width: 50px;
   height: 40px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .arrow_left div {
@@ -460,7 +420,7 @@ nav {
   margin-top: 5px;
   width: 50px;
   height: 40px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .arrow_right div {
@@ -603,6 +563,13 @@ Dividida en dos cuerpos; Historia y Rediseño.
   margin-bottom: 1%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .Tabla_Banco_C,
@@ -652,14 +619,14 @@ Dividida en dos cuerpos; Historia y Rediseño.
 }
 
 .Contenido_tabla ul {
-  padding: 0;
+  padding: 0 3%;
   margin: 3% 0;
   list-style-type: none;
   line-height: 2;
   color: #969696;
 }
 
-.Boton_Banco_Caballeria,
+.Boton_Banco_C,
 .Boton_Herrajes_B,
 .Boton_Herrajes_S,
 .Boton_Licencia {
@@ -675,7 +642,7 @@ Dividida en dos cuerpos; Historia y Rediseño.
   transition: all 0.4s ease 0s;
 }
 
-.Boton_Banco_Caballeria:hover,
+.Boton_Banco_C:hover,
 .Boton_Herrajes_B:hover,
 .Boton_Herrajes_S:hover,
 .Boton_Licencia:hover {
@@ -761,21 +728,19 @@ textarea {
 /*------------ Footer ---------------*/
 #footer {
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .container_footer {
   background-color: rgba(170, 180, 8, 0.7);
   color: #fff;
-  padding: 1% 1% .2%;
+  padding: .5rem;
   text-align: center;
-  font-size: .85rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
 .Sitbasic {
-  padding: 1% 0 0;
+  padding: .2rem 0;
   margin-bottom: 0;
 }
 
@@ -785,7 +750,7 @@ textarea {
 
 .ft {
   display: inline-block;
-  padding: 0 2%;
+  padding: 2% 0 1%;
   margin: auto;
   color: #fff;
 }
@@ -801,25 +766,6 @@ textarea {
 .footer-links a:hover {
   cursor: pointer;
   color: rgba(85, 90, 4, 0.8);
-}
-
-/* Aviso legal + Política de privacidad */
-.aviso_legal_pag,
-.politica_pivacidad_pag,
-.montaje_pag,
-.galeria_pag {
-  width: 90%;
-  padding: 3% 5%;
-  line-height: 1.8;
-}
-
-.aviso_legal_pag h3,
-.politica_pivacidad_pag h3,
-.montaje_pag h3,
-.galeria_pag h3 {
-  margin: 2% 5%;
-  text-align: center;
-  color: rgba(170, 180, 8, 0.7);
 }
 
 /* --------- Galeria ------------ */
@@ -872,23 +818,31 @@ textarea {
     padding: 12% 10%;
   }
   .imagen-banco {
-    margin: 0 0 0 15%;
+    margin: 0 0 0 10%;
   }
   /* ------- Galería de Fotos | Testimoniales ----- */
-  #galeria {
-    padding: 6% 5%;
-  }
   .galeria {
+    padding: 7% 0 0 0;
     width: 80%;
+  }
+  .slide {
+    max-height: 75vh;
+  }
+  .slide__caption {
+    top: 88%;
+    max-width: 65%;
+  }
+  .slide__caption--text {
+    font-size: 1.2rem;
   }
   .slider__btn {
     height: 75%;
-    top: 5vh;
-    padding: 0 10%;
+    top: 8vh;
+    padding: 0 7%;
   }
   /* ---------------- Sección Diseño -------------- */
   #Disegno {
-    padding: 4% 5%;
+    padding: 3% 5%;
   }
   .Historia,
   .Rediseño {
@@ -901,7 +855,7 @@ textarea {
   }
   .Imagen_tabla img {
     margin: 6%;
-    width: 22vh;
+    width: 26vh;
     height: auto;
   }
   /* Apartado Contacto - Formulario */
@@ -923,7 +877,7 @@ textarea {
     font-size: 1.4rem;
   }
   p {
-    font-size: .75rem;
+    font-size: .9rem;
   }
   /* ---------- Barra de navegador ------------- */
   .nav-bar {
@@ -931,7 +885,7 @@ textarea {
   }
   #header-img {
     height: 28px;
-    margin: auto;
+    margin: 10% 0 0 0;
   }
   .nav-item {
     font-size: 1rem;
@@ -939,18 +893,41 @@ textarea {
   }
   /* --------- Presentación | Imagen principal con texto --------- */
   #presentacion {
-    padding: 10%;
+    padding: 10% 10% 0;
+  }
+  .boton-diseño,
+  .boton-ver-producto {
+    margin: 2% 2% 5% 0;
+    width: 14vw;
+    height: 4vw;
   }
   .cover {
     width: 50%;
   }
   /* ------------- Galería de Fotos | Testimoniales ------ */
-  #galeria {
-    padding: 8% 5%;
+  .galeria {
+    padding: 12% 0 0 0;
+    width: 80%;
+    height: 70vh;
+  }
+  .slide {
+    max-height: 80vh;
+  }
+  .slide__caption {
+    top: 80%;
+    max-width: 75%;
+  }
+  .slide__caption--text {
+    font-size: 1.1rem;
+  }
+  .slider__btn {
+    height: 75%;
+    top: 10vh;
+    padding: 0 6%;
   }
   /* -------------------- Sección Diseño ----------------- */
-  .Diseño_Historia {
-    padding: 8% 5%;
+  #Disegno {
+    padding: 8% 5% 0;
   }
   .Historia,
   .Rediseño {
@@ -964,7 +941,7 @@ textarea {
   }
   /* ---------------- Sección Catálogo --------------------- */
   #Catalogo {
-    padding: 12% 5%;
+    padding: 7% 5%;
   }
   .Cabecera_Catalogo {
     padding: 1% 15%;
@@ -980,15 +957,13 @@ textarea {
   }
   .Titulo_tabla h1 {
     margin: 1%;
-    font-size: 1.2rem;
   }
   .Contenido_tabla ul {
     line-height: 1.6;
   }
   /* -------- Apartado Contacto - Formulario ---------- */
   .Contacto {
-    padding: 3% 5%;
-    color: #969696;
+    padding: 3% 5% 5%;
   }
   #submit {
     margin: 2%;
@@ -1010,12 +985,15 @@ textarea {
     font-size: 14px;
   }
   /* ---------- Barra de navegador ------------- */
+  #header {
+    height: 5vh;
+  }
   .nav-bar {
     margin: 0 24% 0 10%;
   }
   #header-img {
     height: 26px;
-    margin: auto;
+    margin: 10% 0 0 0;
   }
   .nav-links {
     margin: 1% 8% 0 0;
@@ -1026,20 +1004,72 @@ textarea {
   }
   /* ------------ Presentación | Imagen principal con texto ------------- */
   #presentacion {
-    padding: 10%;
+    padding: 10% 10% 6% 10%;
+  }
+  .intro-text {
+    margin: 12% 8% 5% 0;
   }
   .boton-diseño,
-  .boton-comprar {
-    width: 14vw;
-    height: 3vw;
+  .boton-ver-producto {
+    margin: 2% 2% 5% 0;
+    width: 16vw;
+    height: 4vw;
   }
   /* -------------------- Galería de Fotos | Testimoniales ---------------- */
-  #galeria {
-    padding: 14% 5%;
+  .galeria {
+    padding: 9% 0 0 0;
+    width: 80%;
+    height: 50%;
   }
-  .carousel-item {
-    height: 60vh;
-    width: auto;
+  .slide {
+    max-height: 80vh;
+  }
+  .slide__caption {
+    top: 78%;
+    max-width: 90%;
+  }
+  .slide__caption--text {
+    font-size: 1.1rem;
+  }
+  .slider__btn {
+    height: 75%;
+    top: 14vh;
+    padding: 0 6%;
+  }
+  /* ---------------- Sección Catálogo --------------------- */
+  #Catalogo {
+    width: 90%;
+    padding: 7% 5% 3%;
+    margin: auto;
+    text-align: center;
+  }
+  .Tabla_Banco_C,
+  .Tabla_Herrajes_B,
+  .Tabla_Herrajes_S,
+  .Tabla_Licencia {
+    margin: 1.5% 5%;
+    min-width: 30%;
+    max-width: 40%;
+  }
+  .Imagen_tabla img {
+    margin: 6%;
+    width: 20vw;
+    height: auto;
+  }
+  .Boton_Banco_C,
+  .Boton_Herrajes_B,
+  .Boton_Herrajes_S,
+  .Boton_Licencia {
+    width: 18vw;
+    height: 4vw;
+  }
+  /* ------------- Apartado Contacto - Formulario -------------- */
+  .Contacto {
+    padding: 13% 5% 5%;
+  }
+  #submit {
+    width: 18vw;
+    height: 4vw;
   }
 }
 
@@ -1056,35 +1086,29 @@ textarea {
   body {
     overflow-x: hidden;
   }
-  html {
-    font-size: 14px;
-  }
   h1 {
     font-size: 1.8rem;
   }
   h2 {
     font-size: 1.2rem;
   }
-  p {
-    font-size: .65rem;
-  }
   /* ---------- Barra de navegador ------------- */
   #header,
   nav {
     height: 65px;
   }
-  #header-img {
-    height: 22px;
-    margin: auto;
-  }
   .nav-bar {
     margin: 0 15% 0 10%;
+  }
+  #header-img {
+    height: 22px;
+    margin: 10% 0 0 0;
   }
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 45vh;
-    top: 9vh;
+    height: 25vh;
+    top: 5vh;
     background-color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1119,7 +1143,7 @@ textarea {
             transform: translateX(0%);
   }
   .nav-item {
-    margin: 5%;
+    margin: 10%;
   }
   /* ------------ Presentación | Imagen principal con texto ------------- */
   #presentacion {
@@ -1129,9 +1153,9 @@ textarea {
     padding-bottom: 1%;
   }
   .boton-diseño,
-  .boton-comprar {
-    width: 15vw;
-    height: 3.5vw;
+  .boton-ver-producto {
+    width: 16vw;
+    height: 4vw;
     font-size: 0.8rem;
   }
   .imagen-banco {
@@ -1141,9 +1165,20 @@ textarea {
   #galeria {
     padding: 14% 5%;
   }
-  .carousel-item {
-    height: 60vh;
-    width: auto;
+  .slide {
+    max-height: 60vh;
+  }
+  .slide__caption {
+    top: 70%;
+    max-width: 80%;
+  }
+  .slide__caption--text {
+    font-size: 1.1rem;
+  }
+  .slider__btn {
+    height: 75%;
+    top: 5vh;
+    padding: 0 12%;
   }
   /* -------------------- Sección Diseño ----------------- */
   .Diseño_Historia {
@@ -1152,19 +1187,22 @@ textarea {
   .Imagen_Historia img,
   .Imagen_rediseño img {
     width: 60%;
-    -webkit-animation: drop2 1.5s ease-in;
-            animation: drop2 1.5s ease-in;
   }
   /* ---------------- Sección Catálogo --------------------- */
   #Catalogo {
-    width: 90%;
     padding: 8% 5%;
-    margin: auto;
-    text-align: center;
+  }
+  .Tabla_Banco_C,
+  .Tabla_Herrajes_B,
+  .Tabla_Herrajes_S,
+  .Tabla_Licencia {
+    margin: 1.5% 5%;
+    width: 45%;
+    min-width: 35%;
   }
   .Imagen_tabla img {
     margin: 5%;
-    width: 22vh;
+    width: 18vh;
   }
   .Contenido_tabla {
     margin: 3.5% 2%;
@@ -1172,22 +1210,9 @@ textarea {
   .Titulo_tabla {
     margin: 3% 0;
   }
-  .Boton_Banco_Caballeria,
-  .Boton_Herrajes_B,
-  .Boton_Herrajes_S {
-    margin: 4% 0;
-    width: 16vw;
-    height: 4vw;
-    font-size: 1rem;
-  }
-  .Boton_Banco_Pino {
-    width: 22vw;
-    height: 4vw;
-  }
   /* ------ Apartado Contacto - Formulario ------- */
   .Contacto {
-    padding: 8% 5% 1%;
-    color: #969696;
+    padding: 8% 5% 3%;
   }
   #submit {
     width: 16vw;
@@ -1205,80 +1230,44 @@ textarea {
   }
 }
 
-/* -------------------- media query 479 (móvil) -------------------------   */
-@media screen and (max-width: 479px) {
-  html {
-    font-size: 13px;
-  }
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  p {
-    font-size: .6rem;
-  }
-  /* ---------- Barra de navegador ------------- */
-  #header,
-  nav {
-    height: 70px;
-  }
-  #header-img {
-    height: 20px;
-    margin: auto;
-  }
-  .nav-links {
-    top: 8vh;
-    width: 35%;
-    margin: 1% 8% 0 0;
-  }
-  .nav-active {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  /* ------------ Presentación | Imagen principal con texto ------------- */
-  #presentacion {
-    padding: 15% 10% 0%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .intro-text {
-    margin: 10% 0 0 0;
-  }
-  .boton-diseño,
-  .boton-comprar {
-    width: 24vw;
-    height: 6vw;
-  }
-  .cover {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    justify-items: center;
-    -webkit-animation: drop ease-in;
-            animation: drop ease-in;
-    width: 100%;
-    padding: 10%;
-  }
-  .imagen-banco {
-    width: 100%;
-    margin: 0;
-    -webkit-animation: drop2 1.5s ease-in;
-            animation: drop2 1.5s ease-in;
-    z-index: -1;
+/* -------------------- media query 601  -----------------------------   */
+@media screen and (max-width: 601px) {
+  body {
+    overflow-x: hidden;
   }
   /* -------------------- Galería de Fotos | Testimoniales ---------------- */
   #galeria {
-    padding: 20% 5% 5%;
+    padding: 12% 5% 15%;
   }
-  .carousel-item {
-    height: 35vh;
-    width: auto;
+  .slide {
+    max-height: 60vh;
   }
-  /* -------------------- Sección Diseño ----------------- */
+  .slide__caption {
+    top: 100%;
+    max-width: 100%;
+    text-shadow: 0px 0px 0px #ffffff;
+    color: #969696;
+    font-size: 0.85rem;
+  }
+  .slide__caption--text {
+    font-size: 0.9rem;
+  }
+  .slider__btn {
+    height: 53%;
+    top: 7.5vh;
+    padding: 0 12%;
+  }
+  .arrow_left {
+    margin-top: 0px;
+    width: 40px;
+    height: 30px;
+  }
+  .arrow_right {
+    margin-top: 0px;
+    width: 40px;
+    height: 30px;
+  }
+  /* -------------------- Sección Diseño ----------------------- */
   .Diseño_Historia {
     padding: 15% 5% 4%;
   }
@@ -1307,93 +1296,160 @@ textarea {
     z-index: -1;
   }
   /* ---------------- Sección Catálogo --------------------- */
-  #Catalogo {
-    width: 90%;
-    padding: 20% 10% 10%;
-    margin: auto;
-    text-align: center;
-  }
-  .Cabecera_Catalogo {
-    padding: 0;
+  .Catalogo_Linea {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .Tabla_Banco_C,
-  .Tabla_Silla_C,
-  .Tabla_Banco_P,
-  .Tabla_Silla_P {
+  .Tabla_Herrajes_B,
+  .Tabla_Herrajes_S,
+  .Tabla_Licencia {
     padding: 3%;
-    margin: 1.5%;
-    width: 28vh;
-    height: auto;
+    width: 60%;
+    min-width: 50%;
+    max-width: 70%;
+    min-height: 35vh;
   }
   .Imagen_tabla img {
-    margin: 5%;
     width: 22vh;
   }
-  .Contenido_tabla {
-    margin: 3.5% 2%;
-  }
-  .Titulo_tabla {
-    margin: 2% 0;
-  }
   .Titulo_tabla h1 {
-    margin: 1.5%;
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #aab408;
+    font-size: 1.1rem;
   }
   .Contenido_tabla ul {
-    margin: 1% 0;
-    line-height: 1.5;
-    font-size: 0.8rem;
+    margin: 2% 0;
+    font-size: 0.9rem;
   }
-  .Boton_Banco_Caballeria,
+  .Boton_Banco_C,
   .Boton_Herrajes_B,
   .Boton_Herrajes_S,
   .Boton_Licencia {
     margin: 4% 0 2%;
     width: 35vw;
     height: 7vw;
-    font-size: 0.8rem;
+    font-size: 1rem;
     -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
   }
   /* ------ Apartado Contacto - Formulario ------- */
   .Contacto {
-    padding: 8% 5% 4%;
-    color: #969696;
+    padding: 8% 5% 5%;
   }
-  #name,
-  #name-label,
-  #surname,
-  #surname-label,
-  #email,
-  #email-label,
-  #phone,
-  #phone-label,
-  #pais,
-  #pais-label {
-    margin: 1.5%;
+}
+
+/* -------------------- media query 479 (móvil) -------------------------   */
+@media screen and (max-width: 479px) {
+  /* ---------- Barra de navegador ------------- */
+  #header,
+  nav {
+    height: 60px;
   }
-  #email {
-    margin-left: 6%;
+  .nav-bar {
+    margin: 0 18% 0 10%;
   }
-  #phone {
-    margin-left: 2.5%;
+  .nav-links {
+    top: 8vh;
+    width: 25%;
+    margin: 0% 8.5% 2% 0;
+    z-index: 2;
   }
-  #pais {
-    margin-left: 9.5%;
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
-  .Desplegable {
-    margin: 1%;
+  /* ------------ Presentación | Imagen principal con texto ------------- */
+  #presentacion {
+    padding: 15% 15% 0 3%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .Comentarios {
-    margin: 2% 0 0 0;
+  .intro-text {
+    margin: 10% 0 0 0;
+  }
+  .boton-diseño,
+  .boton-ver-producto {
+    width: 28vw;
+    height: 7vw;
+    font-size: 1rem;
+  }
+  .cover {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    -webkit-animation: drop ease-in;
+            animation: drop ease-in;
+    width: 100%;
+    padding: 3% 10%;
+    text-align: center;
+  }
+  .imagen-banco {
+    height: auto;
+    width: 70%;
+    margin: 0 auto;
+    -webkit-animation: drop2 1.5s ease-in;
+            animation: drop2 1.5s ease-in;
+  }
+  /* -------------------- Galería de Fotos | Testimoniales ---------------- */
+  #galeria {
+    padding: 16% 5%;
+  }
+  .galeria {
+    padding: 0;
+    width: 80%;
+    height: 30vh;
+  }
+  .slider__btn {
+    height: 45%;
+    top: 7.5vh;
+    padding: 0 12%;
+  }
+  .slider__btn--next {
+    right: 3%;
+  }
+  .arrow_left {
+    margin-top: 0px;
+    width: 30px;
+    height: 20px;
+  }
+  .arrow_right {
+    margin-top: 0px;
+    width: 30px;
+    height: 20px;
+  }
+  /* -------------------- Sección Diseño ----------------- */
+  #Disegno {
+    padding: 15% 5% 0;
+  }
+  /* ---------------- Sección Catálogo --------------------- */
+  #Catalogo {
+    padding: 12% 5%;
+  }
+  .Boton_Banco_C,
+  .Boton_Herrajes_B,
+  .Boton_Herrajes_S,
+  .Boton_Licencia {
+    font-size: 1rem;
+  }
+  /* ------ Apartado Contacto - Formulario ------- */
+  .Contacto {
+    padding: 13% 5%;
   }
   #submit {
     margin: 4%;
-    width: 28vw;
-    height: 7vw;
-    font-size: 0.8rem;
+    width: 32vw;
+    height: 8vw;
+    font-size: 1.1rem;
   }
 }
 
@@ -1440,13 +1496,13 @@ textarea {
 /* ---------------------------- FIN ----------------------------------- */
 @media screen and (max-width: 560px) {
   html {
-    font-size: 12px !important;
+    font-size: 13px !important;
   }
 }
 
 @media screen and (max-width: 400px) {
   html {
-    font-size: 11px !important;
+    font-size: 12px !important;
   }
   .slider .indicators__item {
     width: 5rem;
