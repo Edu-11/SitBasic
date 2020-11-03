@@ -10,12 +10,12 @@ const navSlide = () => {
         nav.classList.toggle("nav-active");
 
         //Animate link
-        navLinks.forEach((link, index) => {
+      navLinks.forEach((link, index) => {
+        var linkStyle = `navLinkFade 0.5s ease forwards ${index / 7 + 0.4}s`;
             if (link.style.animation) {
                 link.style.animation = "";
             } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
-                    .4}s`;
+                link.style.animation = linkStyle;
             }
         });
         // Burger animation
@@ -45,8 +45,3 @@ form.addEventListener('keydown', function () {
     })
     console.log('ya está el botón activo');
 })
-
-
-/* Seguridad, si en el texto del comentario hay una web no entra */
-// TODO
-//

@@ -96,15 +96,15 @@
         </nav>
     </header>
     <main>
-        <section id="producto" class="container-fluid producto_Banco_Caballeria">
+        <section id="producto" class="producto_Banco_Caballeria">
             <a data-smooth class="link_formulario" href="#formulario_compra">
                 <div class="ficha_producto">
-                    <div class="row ficha_producto_Banco_Caballeria">
-                        <div class="col-lg-6 col-md-12 col-sm-12 ficha_imagen">
+                    <div class="ficha_producto_Banco_Caballeria">
+                        <div class="ficha_imagen">
                             <img src="./images/Sitbasic_08_prodBanco.jpg"
                                 alt="Banco de Caballeria">
                         </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 ficha_texto">
+                        <div class="ficha_texto">
                             <div class="ficha_titulo">
                                 <h1>Banco de Caballería</h1>
                             </div>

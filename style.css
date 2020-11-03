@@ -1235,6 +1235,13 @@ textarea {
   body {
     overflow-x: hidden;
   }
+  /* ------------ Presentación | Imagen principal con texto ------------- */
+  .boton-diseño,
+  .boton-ver-producto {
+    width: 18vw;
+    height: 5vw;
+    font-size: 0.8rem;
+  }
   /* -------------------- Galería de Fotos | Testimoniales ---------------- */
   #galeria {
     padding: 12% 5% 15%;
@@ -1243,7 +1250,7 @@ textarea {
     max-height: 60vh;
   }
   .slide__caption {
-    top: 100%;
+    top: 94%;
     max-width: 100%;
     text-shadow: 0px 0px 0px #ffffff;
     color: #969696;
@@ -1313,9 +1320,9 @@ textarea {
   .Tabla_Herrajes_S,
   .Tabla_Licencia {
     padding: 3%;
-    width: 60%;
-    min-width: 50%;
-    max-width: 70%;
+    width: 70%;
+    min-width: 60%;
+    max-width: 80%;
     min-height: 35vh;
   }
   .Imagen_tabla img {
@@ -1335,9 +1342,6 @@ textarea {
     margin: 4% 0 2%;
     width: 35vw;
     height: 7vw;
-    font-size: 1rem;
-    -webkit-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
   }
   /* ------ Apartado Contacto - Formulario ------- */
   .Contacto {
@@ -1345,11 +1349,10 @@ textarea {
   }
 }
 
-/* -------------------- media query 479 (móvil) -------------------------   */
-@media screen and (max-width: 479px) {
+/* -------------------- media query 499 (móvil) -------------------------   */
+@media screen and (max-width: 499px) {
   /* ---------- Barra de navegador ------------- */
-  #header,
-  nav {
+  #header {
     height: 60px;
   }
   .nav-bar {
@@ -1367,18 +1370,30 @@ textarea {
   }
   /* ------------ Presentación | Imagen principal con texto ------------- */
   #presentacion {
-    padding: 15% 15% 0 3%;
+    padding: 12% 15% 0 10%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .titular {
+    margin: 0 0 0 -9%;
+    padding: 2%;
+  }
   .intro-text {
-    margin: 10% 0 0 0;
+    margin: 6% 0 0 0;
+    text-align: center;
+  }
+  .intro-text p {
+    margin: 5% 8%;
+  }
+  .botones {
+    text-align: center;
+    padding: 0;
   }
   .boton-diseño,
   .boton-ver-producto {
-    width: 28vw;
+    width: 34vw;
     height: 7vw;
     font-size: 1rem;
   }
@@ -1390,7 +1405,7 @@ textarea {
     -webkit-animation: drop ease-in;
             animation: drop ease-in;
     width: 100%;
-    padding: 3% 10%;
+    padding: 3% 10% 3% 3%;
     text-align: center;
   }
   .imagen-banco {
@@ -1402,7 +1417,7 @@ textarea {
   }
   /* -------------------- Galería de Fotos | Testimoniales ---------------- */
   #galeria {
-    padding: 16% 5%;
+    padding: 5%;
   }
   .galeria {
     padding: 0;
@@ -1494,19 +1509,4 @@ textarea {
 }
 
 /* ---------------------------- FIN ----------------------------------- */
-@media screen and (max-width: 560px) {
-  html {
-    font-size: 13px !important;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 12px !important;
-  }
-  .slider .indicators__item {
-    width: 5rem;
-    height: 1rem;
-  }
-}
 /*# sourceMappingURL=style.css.map */

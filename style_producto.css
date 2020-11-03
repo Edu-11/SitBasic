@@ -84,7 +84,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 10vh;
+  min-height: 60px;
   margin: 0 10% 0 10%;
   color: #969696;
 }
@@ -299,7 +299,7 @@ select {
 }
 
 textarea {
-  margin: 0.5rem;
+  margin: 0.3rem;
 }
 
 #submit {
@@ -310,8 +310,8 @@ textarea {
   width: 16vw;
   height: 3vw;
   font-size: 1rem;
-  padding: .5rem .6rem;
-  margin: .5rem;
+  padding: .35rem;
+  margin: 1rem;
 }
 
 #submit:hover {
@@ -525,7 +525,7 @@ textarea {
     padding: 0;
   }
   #submit {
-    margin: 2%;
+    margin: .75rem;
   }
 }
 
@@ -541,7 +541,7 @@ textarea {
     font-size: 1.4rem;
   }
   p {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
   /* ---------- Barra de navegador ------------- */
   .nav-bar {
@@ -549,7 +549,7 @@ textarea {
   }
   #header-img {
     height: 28px;
-    margin: auto;
+    margin: 10% 0 0 0;
   }
   .nav-item {
     font-size: 1rem;
@@ -557,11 +557,10 @@ textarea {
   }
   /* --------- Sección Producto principal --------------------- */
   #producto {
-    width: 80%;
     padding: 14% 5% 5%;
   }
   .ficha_texto p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   /* ------------ Formulario de pedido ------------- */
   #formulario_compra {
@@ -613,26 +612,28 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 80%;
     margin: auto;
     margin-bottom: 1%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .Imagen_tabla img {
-    margin: 5% 4%;
-    width: 25vh;
+    margin: 6%;
+    width: 22vh;
     height: auto;
   }
+  .Titulo_tabla h1 {
+    margin: 1%;
+  }
+  .Contenido_tabla ul {
+    line-height: 1.6;
+  }
   .Boton_Banco_Caballeria,
-  .Boton_Silla_Caballeria,
-  .Boton_Banco_Pino,
-  .Boton_Silla_Pino {
+  .Boton_Herrajes_B,
+  .Boton_Herrajes_S,
+  .Boton_Licencia {
     width: 17vw;
     height: 3.5vw;
-    font-size: 1rem;
-    -webkit-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
   }
 }
 
@@ -658,8 +659,7 @@ textarea {
   }
   /* --------- Sección Producto principal --------------------- */
   #producto {
-    width: 80%;
-    padding: 8% 5% 5%;
+    padding: 10% 5% 5%;
   }
   .ficha_imagen img {
     width: 65%;
@@ -677,40 +677,6 @@ textarea {
     text-align: center;
     color: #969696;
   }
-  .formulario {
-    padding: 0;
-  }
-  #name,
-  #name-label,
-  #surname,
-  #surname-label,
-  #email,
-  #email-label,
-  #phone,
-  #phone-label,
-  #pais,
-  #pais-label {
-    margin: 0.2%;
-  }
-  #email {
-    margin-left: 1.8%;
-  }
-  #phone {
-    margin-left: 0.6%;
-  }
-  #pais {
-    margin-left: 3.5%;
-  }
-  .Desplegable,
-  .Desplegable_pedido {
-    margin: 0.3% 0 0 0;
-  }
-  .Comentarios {
-    margin: 0;
-  }
-  #submit {
-    margin: 0.5%;
-  }
   /* ------  Sección Catálogo - Otros productos  --------  */
   .Catalogo {
     padding: 2% 0;
@@ -727,8 +693,8 @@ textarea {
 
 /* -------------------- media query 769 (toggler) -------------------------   */
 @media screen and (max-width: 769px) {
-  html {
-    font-size: 14px !important;
+  body {
+    overflow-x: hidden;
   }
   h1 {
     font-size: 1.8rem;
@@ -736,25 +702,23 @@ textarea {
   h2 {
     font-size: 1.2rem;
   }
-  p {
-    font-size: 0.65rem;
-  }
   /* ---------- Barra de navegador ------------- */
-  #header {
+  #header,
+  nav {
     height: 65px;
-  }
-  #header-img {
-    height: 22px;
-    margin: auto;
   }
   .nav-bar {
     margin: 0 15% 0 10%;
   }
+  #header-img {
+    height: 22px;
+    margin: 10% 0 0;
+  }
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 45vh;
-    top: 9vh;
+    height: 25vh;
+    top: 5vh;
     background-color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -793,35 +757,36 @@ textarea {
   }
   /* --------- Sección Producto principal --------------------- */
   #producto {
-    width: 80%;
-    padding: 10% 5% 5%;
+    padding: 10% 5% 2%;
   }
   /* ------------ Formulario de pedido ------------- */
   .formulario {
     padding: 1% 0;
     text-align: center;
   }
+  .ficha_instrucciones {
+    width: 80%;
+    margin: 1rem auto;
+  }
   #submit {
-    width: 20vw;
-    height: 4vw;
+    width: 28vw;
+    height: 6vw;
   }
   /* ------  Sección Catálogo - Otros productos  --------  */
-  .Catalogo {
-    width: 80%;
-  }
-  .Catalogo_Linea {
-    width: 60%;
+  #Catalogo {
+    padding: 7% 4%;
   }
   .Tabla_Banco_C,
-  .Tabla_Silla_C,
-  .Tabla_Banco_P,
-  .Tabla_Silla_P {
-    margin: 3% 6%;
-    width: 30vh;
+  .Tabla_Herrajes_B,
+  .Tabla_Herrajes_S,
+  .Tabla_Licencia {
+    margin: 1.5% 5%;
+    width: 60%;
+    min-width: 45%;
   }
   .Imagen_tabla img {
     margin: 5%;
-    width: 25vh;
+    width: 18vh;
   }
   .Contenido_tabla {
     margin: 3.5% 2%;
@@ -829,43 +794,97 @@ textarea {
   .Titulo_tabla {
     margin: 3% 0;
   }
-  .Boton_Banco_Caballeria,
-  .Boton_Silla_Caballeria,
-  .Boton_Banco_Pino,
-  .Boton_Silla_Pino {
-    margin: 4% 0;
-    width: 16vw;
-    height: 4vw;
-    font-size: 1rem;
+}
+
+/* -------------------- media query 601  -----------------------------   */
+@media screen and (max-width: 601px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* ------------ Formulario de pedido ------------- */
+  #name,
+  #name-label,
+  #surname,
+  #surname-label,
+  #email,
+  #email-label,
+  #phone,
+  #phone-label,
+  #pais,
+  #pais-label {
+    margin: 0.3%;
+  }
+  #email {
+    margin-left: 3%;
+  }
+  #phone {
+    margin-left: 0.8%;
+  }
+  #pais {
+    margin-left: 5.2%;
+  }
+  #submit {
+    margin: 1%;
+    width: 30vw;
+    height: 6vw;
+  }
+  /* ---------------- Sección Catálogo - Otros productos --------------------- */
+  .Catalogo_Linea {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Tabla_Banco_C,
+  .Tabla_Herrajes_B,
+  .Tabla_Herrajes_S,
+  .Tabla_Licencia {
+    padding: 3%;
+    width: 80%;
+    min-width: 60%;
+    max-width: 80%;
+    min-height: 35vh;
+  }
+  .Imagen_tabla img {
+    width: 22vh;
+  }
+  .Titulo_tabla h1 {
+    font-size: 1.1rem;
+  }
+  .Contenido_tabla ul {
+    margin: 2% 0;
+    font-size: 0.9rem;
+  }
+  .Boton_Banco_C,
+  .Boton_Herrajes_B,
+  .Boton_Herrajes_S,
+  .Boton_Licencia {
+    margin: 4% 0 2%;
+    width: 35vw;
+    height: 7vw;
   }
 }
 
-/* -------------------- media query 479 (móvil) -------------------------   */
-@media screen and (max-width: 479px) {
-  html {
-    font-size: 13px !important;
-  }
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  p {
-    font-size: 0.6rem;
-  }
+/* -------------------- media query 499 (móvil) -------------------------   */
+@media screen and (max-width: 499px) {
   /* ---------- Barra de navegador ------------- */
   #header {
-    height: 70px;
+    height: 60px;
   }
-  #header-img {
-    height: 20px;
-    margin: auto;
+  .nav-bar {
+    margin: 0 18% 0 10%;
   }
   .nav-links {
     top: 8vh;
-    width: 35%;
-    margin: 1% 5% 0 0;
+    width: 25%;
+    margin: 0% 8.5% 2% 0;
+    z-index: 2;
   }
   .nav-active {
     -webkit-transform: translateX(0%);
@@ -883,114 +902,40 @@ textarea {
     width: 65%;
     height: auto;
   }
+  .ficha_titulo h1 {
+    font-size: 1.4rem;
+  }
   .ficha_cuerpo {
-    padding: 2% 8%;
+    padding: 2%;
   }
   .ficha_precio {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   /* ------------ Formulario de pedido ------------- */
   #formulario_compra {
     padding: 15% 8% 8%;
-    text-align: center;
-    color: #969696;
   }
   .formulario {
     padding: 3%;
-  }
-  #name,
-  #name-label,
-  #surname,
-  #surname-label,
-  #email,
-  #email-label,
-  #phone,
-  #phone-label,
-  #pais,
-  #pais-label {
-    margin: 0.5%;
   }
   #email {
     margin-left: 5%;
   }
   #phone {
-    margin-left: 1.6%;
+    margin-left: 0.8%;
   }
   #pais {
-    margin-left: 9.5%;
-  }
-  .Desplegable,
-  .Desplegable_pedido {
-    margin: 2% 0 0 0;
-  }
-  .Comentarios {
-    margin: 1%;
+    margin-left: 9%;
   }
   #submit {
-    margin: 3%;
+    margin: 4%;
     width: 45vw;
-    height: 9vw;
+    height: 8vw;
+    font-size: 1.1rem;
   }
   /* ------  Sección Catálogo - Otros productos  --------  */
   #Catalogo {
-    width: 90%;
-    padding: 12% 10% 6%;
-    margin: auto;
     text-align: center;
-  }
-  .Catalogo_Linea {
-    width: 95%;
-  }
-  .Cabecera_Catalogo {
-    padding: 0;
-  }
-  .Tabla_Banco_C,
-  .Tabla_Silla_C,
-  .Tabla_Banco_P,
-  .Tabla_Silla_P {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    border-radius: 5%;
-    padding: 3%;
-    margin: 1.5%;
-    width: 28vh;
-    height: auto;
-    -webkit-box-shadow: 1px 1px 10px rgba(165, 165, 165, 0.2);
-            box-shadow: 1px 1px 10px rgba(165, 165, 165, 0.2);
-  }
-  .Imagen_tabla img {
-    margin: 5%;
-    width: 22vh;
-  }
-  .Contenido_tabla {
-    margin: 3.5% 2%;
-  }
-  .Titulo_tabla {
-    margin: 2% 0;
-  }
-  .Titulo_tabla h1 {
-    margin: 1.5%;
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #aab408;
-    font-weight: 800;
-  }
-  .Contenido_tabla ul {
-    margin: 1% 0;
-    line-height: 1.5;
-    font-size: 0.8rem;
-  }
-  .Boton_Banco_Caballeria,
-  .Boton_Silla_Caballeria,
-  .Boton_Banco_Pino,
-  .Boton_Silla_Pino {
-    margin: 4% 0 2%;
-    width: 35vw;
-    height: 7vw;
-    font-size: 0.8rem;
-    -webkit-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
   }
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 
 <head>
     <meta charset="UTF-8">
@@ -127,14 +127,14 @@
                 </div>
             </a>
 
-            <div class="indicators">
+            <!-- <div class="indicators">
                 <ul class="indicators__list">
                     <li class="indicators__item active" data-slide-to="0"></li>
                     <li class="indicators__item" data-slide-to="1"></li>
                     <li class="indicators__item" data-slide-to="2"></li>
                     <li class="indicators__item" data-slide-to="3"></li>
                 </ul>
-            </div>
+            </div> -->
         </section>
 
         <section id="Disegno" class="Diseño_Historia">

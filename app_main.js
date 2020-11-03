@@ -89,7 +89,7 @@ function changeSlide(num) {
     }
     prop.id = currentSlide;
     addClass(currentSlide);
-    changeIndicator(currentSlide);
+    // changeIndicator(currentSlide);
 }
 
 // function changeIndicator(id) {
@@ -197,7 +197,5 @@ form.addEventListener('keydown', function () {
             }, 5000)
         } 
     })
-    console.log('ya está el botón activo');
 })
 
-/* Seguridad, si en el texto del comentario hay una web no entra */

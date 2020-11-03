@@ -167,21 +167,19 @@ nav {
 
 #footer {
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .container_footer {
   background-color: $color1;
   color: $bg-color;
-  padding: 1% 1% 0.2%;
+  padding: .5rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
 .Sitbasic {
-  padding: 1% 0 ;
+  padding: .2rem 0;
   margin-bottom: 0;
 }
 
@@ -260,7 +258,7 @@ nav {
   }
 
   p {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   /* ---------- Barra de navegador ------------- */
@@ -577,9 +575,9 @@ nav {
   }
 }
 
-/* -------------------- media query 479 (móvil) -------------------------   */
+/* -------------------- media query 499 (móvil) -------------------------   */
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 499px) {
   html {
     font-size: 13px;
   }
