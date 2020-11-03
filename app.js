@@ -10,12 +10,12 @@ const navSlide = () => {
         nav.classList.toggle("nav-active");
 
         //Animate link
-      navLinks.forEach((link, index) => {
-        var linkStyle = `navLinkFade 0.5s ease forwards ${index / 7 + 0.4}s`;
+        navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = "";
             } else {
-                link.style.animation = linkStyle;
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
+                    .4}s`;
             }
         });
         // Burger animation
@@ -43,5 +43,4 @@ form.addEventListener('keydown', function () {
             }, 5000)
         } 
     })
-    console.log('ya está el botón activo');
 })

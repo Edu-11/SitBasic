@@ -67,7 +67,7 @@ a:active {
 #header {
   width: 100%;
   background-color: $bg-color;
-  height: 10vh;
+  height: 100px;
   align-items: center;
   z-index: 1;
   opacity: 0.92;
@@ -498,6 +498,10 @@ textarea {
   }
 
   /* ---------- Barra de navegador ------------- */
+
+  #header {
+    height: 70px;
+  }
 
   #header-img {
     height: 30px;

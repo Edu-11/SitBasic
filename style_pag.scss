@@ -26,7 +26,7 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgb(150, 150, 150);
   font-weight: 300;
 }
@@ -45,7 +45,7 @@ a:active {
 #header {
   width: 100%;
   background-color: $bg-color;
-  height: 10vh;
+  height: 100px;
   align-items: center;
   z-index: 1;
   opacity: 0.92;
@@ -131,17 +131,20 @@ nav {
 
 .pedido_realizado_pag,
 .aviso_legal_pag,
-.montaje_pag,
 .galeria_pag {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  height: 100%;
   padding: 5% 10%;
   align-items: center;
   justify-content: center;
   scroll-behavior: smooth;
   z-index: 0;
+}
+
+.titulo_aviso {
+  width: 100%;
+  padding: 4% 2%;
 }
 
 .cabecera_galeria {
@@ -158,7 +161,7 @@ nav {
 .pedido_realizado h3,
 .montaje_pag h3,
 .galeria_pag h3 {
-  margin: 2% 5%;
+  margin: 2% 5% 3%;
   text-align: center;
   color: $color1;
 }
@@ -239,6 +242,10 @@ nav {
 
   /* ---------- Barra de navegador ------------- */
 
+  #header {
+    height: 70px;
+  }
+
   #header-img {
     height: 30px;
     margin: 10% 0 0 0;
@@ -246,6 +253,14 @@ nav {
 
   .nav-bar {
     margin: 0 21% 0 10%;
+  }
+
+  /* ------------ Texto Principal ------------- */
+
+  .pedido_realizado_pag,
+  .aviso_legal_pag,
+  .galeria_pag {
+    padding: 5% 10% 1.2%;
   }
 
 }
@@ -277,29 +292,14 @@ nav {
     margin: 3% 0% 1% 10%;
   }
 
-  /* --------- Presentación | Imagen principal con texto --------- */
+  /* ------------- Texto Principal ------------- */
 
   .pedido_realizado_pag,
   .aviso_legal_pag,
-  .montaje_pag,
   .galeria_pag {
     padding: 5% 10%;
   }
 
-  .cover {
-    width: 50%;
-  }
-
-  /* --------- Aviso Legal + Privacidad -------------- */
-
-  .aviso_legal_pag,
-  .politica_pivacidad_pag,
-  .montaje_pag,
-  .galeria_pag {
-    width: 90%;
-    padding: 8% 5%;
-    line-height: 1.8;
-  }
 }
 
 /* -------------------- MEDIA QUERY 991  -------------------------   */
@@ -329,28 +329,6 @@ nav {
     margin: 1% 1% 2% 10%;
   }
 
-  /* ------------ Presentación | Imagen principal con texto ------------- */
-
-  #presentacion {
-    padding: 10%;
-  }
-
-  .boton-diseño,
-  .boton-comprar {
-    width: 14vw;
-    height: 3vw;
-  }
-
-  /* -------------------- Galería de Fotos | Testimoniales ---------------- */
-
-  #Galeria {
-    padding: 14% 5%;
-  }
-
-  .carousel-item {
-    height: 60vh;
-    width: auto;
-  }
 }
 
 /* --------------------- media query 850 --------------------------------- */
@@ -370,20 +348,8 @@ nav {
     overflow-x: hidden;
   }
 
-  html {
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
   p {
-    font-size: 0.65rem;
+    font-size: 0.9rem;
   }
 
   /* ---------- Barra de navegador ------------- */
@@ -393,20 +359,20 @@ nav {
     height: 65px;
   }
 
-  #header-img {
-    height: 22px;
-    margin: auto;
-  }
-
   .nav-bar {
     margin: 0 15% 0 10%;
+  }
+
+  #header-img {
+    height: 22px;
+    margin: 10% 0 0 0;
   }
 
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 45vh;
-    top: 9vh;
+    height: 25vh;
+    top: 5vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -433,172 +399,28 @@ nav {
   }
 
   .nav-item {
-    margin: 5%;
+    margin: 10%;
   }
 
-  /* ------------ Presentación | Imagen principal con texto ------------- */
+/* ------------ Texto Principal ------------- */
 
-  #presentacion {
-    padding: 10% 10% 2%;
-  }
-
-  .botones {
-    padding-bottom: 1%;
-  }
-
-  .boton-diseño,
-  .boton-comprar {
-    width: 15vw;
-    height: 3.5vw;
-    font-size: 0.8rem;
-  }
-
-  .imagen-banco {
-    width: 100%;
-  }
-
-  /* -------------------- Galería de Fotos | Testimoniales ---------------- */
-
-  #Galeria {
-    padding: 14% 5%;
-  }
-
-  .carousel-item {
-    height: 60vh;
-    width: auto;
-  }
-
-  /* -------------------- Sección Diseño ----------------- */
-
-  .Diseño_Historia {
-    padding: 8% 5%;
-  }
-
-  .Imagen_Historia img,
-  .Imagen_rediseño img {
-    width: 60%;
-    animation: drop2 1.5s ease-in;
-  }
-
-  /* ---------------- Sección Catálogo --------------------- */
-
-  #Catalogo {
-    width: 90%;
-    padding: 8% 5%;
-    margin: auto;
-    text-align: center;
-  }
-
-  .Tabla_Banco_C,
-  .Tabla_Silla_C {
-    margin: 1%;
-    width: 30vh;
-  }
-
-  .Tabla_Banco_P {
-    display: block;
-    padding: 1% 15%;
-    margin: 1%;
-    width: 25vh;
-  }
-
-  .Imagen_tabla img {
-    margin: 5%;
-    width: 22vh;
-  }
-
-  .Contenido_tabla {
-    margin: 3.5% 2%;
-  }
-
-  .Titulo_tabla {
-    margin: 3% 0;
-  }
-
-  .Boton_Banco_Caballeria,
-  .Boton_Silla_Caballeria,
-  .Boton_Banco_Pino {
-    margin: 4% 0;
-    width: 16vw;
-    height: 4vw;
-    font-size: 1rem;
-  }
-
-  .Boton_Banco_Pino {
-    width: 22vw;
-    height: 4vw;
-  }
-
-  /* ------ Apartado Contacto - Formulario ------- */
-
-  .Contacto {
-    padding: 8% 5% 1%;
-    color: $textcolor;
-  }
-
-  #name,
-  #name-label,
-  #surname,
-  #surname-label,
-  #email,
-  #email-label,
-  #phone,
-  #phone-label,
-  #pais,
-  #pais-label {
-    margin: 1.5%;
-  }
-
-  .Desplegable {
-    margin: 1%;
-  }
-
-  .Comentarios {
-    margin: 2% 0 0 0;
-  }
-
-  #submit {
-    width: 16vw;
-    height: 4vw;
-    font-size: 0.8rem;
-  }
-
-  /* --------- Aviso Legal + Privacidad -------------- */
-
+  .pedido_realizado_pag,
   .aviso_legal_pag,
-  .politica_pivacidad_pag,
-  .montaje_pag,
   .galeria_pag {
-    width: 90%;
-    padding: 12% 5%;
-    line-height: 1.8;
+    padding: 5% 10%;
   }
+
 }
 
 /* -------------------- media query 499 (móvil) -------------------------   */
 
 @media screen and (max-width: 499px) {
-  html {
-    font-size: 13px;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 0.6rem;
-  }
 
   /* ---------- Barra de navegador ------------- */
 
   #header,
   nav {
-    height: 70px;
+    height: 60px;
   }
 
   #header-img {
@@ -616,59 +438,40 @@ nav {
     transform: translateX(0%);
   }
 
-  /* ------------ Presentación | Imagen principal con texto ------------- */
+  /* ------------ Texto Principal ------------- */
 
-  #presentacion {
-    padding: 15% 10% 0%;
-    flex-direction: column;
+  .pedido_realizado_pag,
+  .aviso_legal_pag,
+  .galeria_pag {
+    padding: 15% 12%;
   }
 
-  .intro-text {
-    margin: 10% 0 0 0;
-  }
+}
 
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .toggle .line2 {
+@keyframes navLinkFade {
+  from {
     opacity: 0;
+    transform: translateX(50px);
   }
 
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 
 /* ---------------------------- FIN ----------------------------------- */
 
-@media screen and (max-width: 560px) {
-  html {
-    font-size: 12.5px !important;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 12px !important;
-  }
-
-  .slider .indicators {
-    &__item {
-      width: 5rem;
-      height: 1rem;
-    }
-  }
-}

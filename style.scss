@@ -66,7 +66,7 @@ a:active {
 #header {
   width: 100%;
   background-color: $bg-color;
-  height: 10vh;
+  height: 100px;
   align-items: center;
   z-index: 1;
   opacity: .92;
@@ -804,6 +804,10 @@ textarea {
 
   /* ---------- Barra de navegador ------------- */
 
+  #header {
+    height: 70px;
+  }
+
   #header-img {
     height: 30px;
     margin: 10% 0 0 0;
@@ -1039,7 +1043,7 @@ textarea {
   /* ---------- Barra de navegador ------------- */
 
   #header {
-  height: 5vh;
+    height: 70px;
   }
 
   .nav-bar {
@@ -1103,10 +1107,6 @@ textarea {
     top: 14vh;
     padding: 0 6%;
   }
-
-  // .indicators__list {
-  //   bottom: 12vh;
-  // }
 
 /* ---------------- Sección Catálogo --------------------- */
 

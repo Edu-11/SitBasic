@@ -61,7 +61,7 @@ a:active {
 #header {
   width: 100%;
   background-color: #fff;
-  height: 10vh;
+  height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -508,6 +508,9 @@ textarea {
     font-size: 15px;
   }
   /* ---------- Barra de navegador ------------- */
+  #header {
+    height: 70px;
+  }
   #header-img {
     height: 30px;
     margin: 10% 0 0 0;
