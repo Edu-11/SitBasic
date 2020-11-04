@@ -180,48 +180,10 @@
                       <input id="SitBasicPedido_Tel" class="CampoFormulario" type="text" name="SitBasicPedido_Tel"
                           placeholder="Escribe tu número de teléfono"><br>
                       <label id="pais-label" for="SitBasic_RedTipPais">País</label>
-                      <!-- <input id="BancoMadera_Pais" class="CampoFormulario" type="text" name="BancoMadera_Pais" placeholder="País"><br> -->
                       <select name="SitBasic_RedTipPais" class="CampoFormulario" id="SitBasic_RedTipPais">
                           <option value="FALTA INDICAR PAIS">Selecciona PAIS</option>
                           <?php include "opcionesPaises.php"
                         ?>
-                          <!-- <option value="1">ESPA&Ntilde;A</option>
-                          <option value="2">FRANCIA</option>
-                          <option value="3">ESPA&Ntilde;A - Islas Baleares</option>
-                          <option value="4">ESPA&Ntilde;A - Islas Canarias</option>
-                          <option value="5">ESTADOS UNIDOS</option>
-                          <option value="7">SUIZA</option>
-                          <option value="8">ITALIA</option>
-                          <option value="9">GERMANY</option>
-                          <option value="10">PORTUGAL</option>
-                          <option value="11">SWEDEN</option>
-                          <option value="12">UNITED STATES OF AMERICA</option>
-                          <option value="13">BELGIUM</option>
-                          <option value="14">HOLANDA</option>
-                          <option value="15">PERU</option>
-                          <option value="16">BRASIL</option>
-                          <option value="17">CHILE</option>
-                          <option value="18">MEXICO</option>
-                          <option value="19">ESPA&Ntilde;A - Catalunya</option>
-                          <option value="20">GRAN BRETA&Ntilde;A</option>
-                          <option value="21">REINO UNIDO</option>
-                          <option value="22">DINAMARCA</option>
-                          <option value="23">ESLOVENIA</option>
-                          <option value="24">TAIWAN</option>
-                          <option value="25">VENEZUELA</option>
-                          <option value="26">MARRUECOS</option>
-                          <option value="27">REINO UNIDO - UNITED KINGDOM</option>
-                          <option value="28">INDIA</option>
-                          <option value="29">COLOMBIA</option>
-                          <option value="30">TUNEZ</option>
-                          <option value="31">GUATEMALA</option>
-                          <option value="32">SRI-LANKA</option>
-                          <option value="33">JORDANIA</option>
-                          <option value="34">AUSTRIA</option>
-                          <option value="35">ARGENTINA</option>
-                          <option value="36">ANDORRA</option>
-                          <option value="37">CHINA</option>
-                          <option value="38">SOUTH AFRICA</option> -->
                       </select><br>
                       <label id="desplegable_pedido" for="SitBasicPedido_Unidades">Unidades</label>
                       <input name="SitBasicPedido_Unidades" type="number" class="CampoFormulario"
@@ -264,54 +226,16 @@
                             <li>Para Bancos de entre 120 y 160 cm. de ancho</li>
                             <li>Para anchuras menores, se puede cortar tubos y varillas a medida</li>
                         </ul>
-
                         <form id="producto_MecanismoBanco" method="post" action="producto_MecanismoBanco.php">
                           <?php
                           include "valoresForm.php";
                           ?>
-                          <!-- <input type="hidden" name="SitBasic_ObservacionesInfPersonal" value="" />
-                          <input type="hidden" name="SitBasic_NomCialApePers" value="" />
-                          <input type="hidden" name="SitBasic_NomPers" value="" />
-                          <input type="hidden" name="SitBasic_ApePers" value="" />
-                          <input type="hidden" name="SitBasic_FiscalNom" value="" />
-                          <input type="hidden" name="SitBasic_NIF" value="" />
-                          <input type="hidden" name="SitBasic_Dir" value="" />
-                          <input type="hidden" name="SitBasic_FiscalDir" value="" />
-                          <input type="hidden" name="SitBasic_CodPostCodPostal" value="" />
-                          <input type="hidden" name="SitBasic_Poblacion" value="" />
-                          <input type="hidden" name="SitBasic_Numero" value="" />
-                          <input type="hidden" name="SitBasic_RedTipPais" value="" />
-                          <input type="hidden" name="SitBasic_Web" value="" />
-                          <input type="hidden" name="SitBasic_Email" value="" />
-                          <input type="hidden" name="SitBasic_Tel" value="" />
-                          <input type="hidden" name="SitBasic_MobTel" value="" />
-                          <input type="hidden" name="SitBasic_Fax" value="" />
-                          <input type="hidden" name="SitBasic_NomPers" value="" />
-                          <input type="hidden" name="SitBasic_Id" value="" />
-                          <input type="hidden" name="SitBasic_FeTraspasoPersona" value="" />
-                          <input type="hidden" name="SitBasic_Activo" value="" />
-                          <input type="hidden" name="SitBasic_OfertaInfPersonal" value="" />
-                          <input type="hidden" name="SitBasic_Sector03" value="" />
-                          <input type="hidden" name="SitBasic_Sector04" value="" />
-                          <input type="hidden" name="SitBasic_Sector05" value="" />
-                          <input type="hidden" name="SitBasic_Sector06" value="" />
-                          <input type="hidden" name="SitBasic_PedidoComentario" value="" />
-
-                          <input type="hidden" name="SitBasic_PedidoFormulario" value="catalogo SitBasic" />
-                          <input type="hidden" name="SitBasic_PedidoEmailEmpresa" value="contact@pimeslu.com" />
-                          <input type="hidden" name="SitBasic_PedidoSector01" value="WebCatSitBasic" /> -->
                           <input type="hidden" name="SitBasic_PedidoSector02" value="SB100H6NAT140" />
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="215" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga" value="MECANISMO plegable SITBASIC de hierro natural para banco de 120 a 160 cms de ancho" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_MecanismoBanco.php"
                             class="Boton_Herrajes_B" value="Comprar" />
                         </form>
-
-                        <!-- <div class="Boton_Comprar">
-                            <a href="/producto_MecanismoBanco.php">
-                                <button class="Boton_Herrajes_B">Comprar</button>
-                            </a>
-                        </div> -->
                     </div>
                 </div>
                 <div class="Tabla_Herrajes_S">
@@ -332,37 +256,6 @@
                           <?php
                           include "valoresForm.php";
                           ?>
-                          <!-- <input type="hidden" name="SitBasic_ObservacionesInfPersonal" value="" />
-                          <input type="hidden" name="SitBasic_NomCialApePers" value="" />
-                          <input type="hidden" name="SitBasic_NomPers" value="" />
-                          <input type="hidden" name="SitBasic_ApePers" value="" />
-                          <input type="hidden" name="SitBasic_FiscalNom" value="" />
-                          <input type="hidden" name="SitBasic_NIF" value="" />
-                          <input type="hidden" name="SitBasic_Dir" value="" />
-                          <input type="hidden" name="SitBasic_FiscalDir" value="" />
-                          <input type="hidden" name="SitBasic_CodPostCodPostal" value="" />
-                          <input type="hidden" name="SitBasic_Poblacion" value="" />
-                          <input type="hidden" name="SitBasic_Numero" value="" />
-                          <input type="hidden" name="SitBasic_RedTipPais" value="" />
-                          <input type="hidden" name="SitBasic_Web" value="" />
-                          <input type="hidden" name="SitBasic_Email" value="" />
-                          <input type="hidden" name="SitBasic_Tel" value="" />
-                          <input type="hidden" name="SitBasic_MobTel" value="" />
-                          <input type="hidden" name="SitBasic_Fax" value="" />
-                          <input type="hidden" name="SitBasic_NomPers" value="" />
-                          <input type="hidden" name="SitBasic_Id" value="" />
-                          <input type="hidden" name="SitBasic_FeTraspasoPersona" value="" />
-                          <input type="hidden" name="SitBasic_Activo" value="" />
-                          <input type="hidden" name="SitBasic_OfertaInfPersonal" value="" />
-                          <input type="hidden" name="SitBasic_Sector03" value="" />
-                          <input type="hidden" name="SitBasic_Sector04" value="" />
-                          <input type="hidden" name="SitBasic_Sector05" value="" />
-                          <input type="hidden" name="SitBasic_Sector06" value="" />   
-                          <input type="hidden" name="SitBasic_PedidoComentario" value="" />
-
-                          <input type="hidden" name="SitBasic_PedidoFormulario" value="catalogo SitBasic" />
-                          <input type="hidden" name="SitBasic_PedidoEmailEmpresa" value="contact@pimeslu.com" />
-                          <input type="hidden" name="SitBasic_PedidoSector01" value="WebCatSitBasic" /> -->
                           <input type="hidden" name="SitBasic_PedidoSector02" value="SB030H6NAT045" />
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="209" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga"
@@ -370,12 +263,6 @@
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_MecanismoSilla.php" class="Boton_Herrajes_S"
                             value="Comprar" />
                         </form>
-
-                        <!-- <div class="Boton_Comprar">
-                            <a href="/producto_MecanismoSilla.php">
-                                <button class="Boton_Herrajes_S">Comprar</button>
-                            </a>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -392,7 +279,8 @@
         </div>
     </footer>
 
-        <?php
+
+    <?php
 
     // ESCRIBE linea de txt en fichero de visitas EN EL SERVIDOR
 

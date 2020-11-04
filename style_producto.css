@@ -235,7 +235,7 @@ nav {
 
 /* ------------ Formulario de pedido ------------- */
 #formulario_compra {
-  padding: 6% 0 5%;
+  padding: 5% 0 5%;
   text-align: center;
   color: #969696;
   font-size: 1rem;
@@ -244,6 +244,10 @@ nav {
 .titulo_formulario {
   color: #aab408;
   padding-top: 2%;
+}
+
+.Intro_datos {
+  padding: 1% 0 0;
 }
 
 .formulario {
@@ -255,33 +259,34 @@ nav {
   margin: auto;
 }
 
-#name,
+#SitBasicPedido_NomPers,
 #name-label,
-#surname,
+#SitBasicPedido_ApePers,
 #surname-label,
-#email,
+#SitBasic_Email,
 #email-label,
-#phone,
+#SitBasicPedido_Tel,
 #phone-label,
-#pais,
+#SitBasic_RedTipPais,
 #pais-label {
   margin: .3rem;
   padding: .3rem;
 }
 
-#email {
+#SitBasic_Email {
   margin-left: 1.4%;
 }
 
-#phone {
+#SitBasicPedido_Tel {
   margin-left: 0.6%;
 }
 
-#pais {
-  margin-left: 2.4%;
+#SitBasic_RedTipPais {
+  margin-left: 0;
+  padding-left: 0;
 }
 
-#dropdown_unidades {
+#SitBasicPedido_Unidades {
   margin-left: 1%;
 }
 
@@ -521,11 +526,12 @@ textarea {
   /* ------------ Formulario de pedido ------------- */
   #formulario_compra {
     padding: 5% 0 2%;
-    text-align: center;
-    color: #969696;
   }
   .formulario {
     padding: 0;
+  }
+  #SitBasic_Email {
+    margin-left: 1.6%;
   }
   #submit {
     margin: .75rem;
@@ -568,35 +574,33 @@ textarea {
   /* ------------ Formulario de pedido ------------- */
   #formulario_compra {
     padding: 10% 0 5%;
-    text-align: center;
-    color: #969696;
   }
   .formulario {
     padding: 2%;
   }
-  #name,
+  #SitBasicPedido_NomPers,
   #name-label,
-  #surname,
+  #SitBasicPedido_ApePers,
   #surname-label,
-  #email,
+  #SitBasic_Email,
   #email-label,
-  #phone,
+  #SitBasicPedido_Tel,
   #phone-label,
-  #pais,
+  #SitBasic_RedTipPais,
   #pais-label {
-    margin: 0.3%;
+    margin: .3rem;
   }
-  #email {
+  #SitBasic_Email {
     margin-left: 1.9%;
   }
-  #phone {
+  #SitBasicPedido_Tel {
     margin-left: 0.55%;
   }
-  #pais {
-    margin-left: 3.4%;
+  #SitBasic_RedTipPais {
+    margin-left: 0;
+    padding-left: 0;
   }
-  .Desplegable,
-  .Desplegable_pedido {
+  #SitBasicPedido_Unidades {
     margin: 1.5% 0 0 0;
   }
   #submit {
@@ -677,8 +681,6 @@ textarea {
   /* ------------ Formulario de pedido ------------- */
   #formulario_compra {
     padding: 6% 0 2%;
-    text-align: center;
-    color: #969696;
   }
   /* ------  Sección Catálogo - Otros productos  --------  */
   .Catalogo {
@@ -768,7 +770,7 @@ textarea {
     text-align: center;
   }
   .ficha_instrucciones {
-    width: 80%;
+    width: 90%;
     margin: 1rem auto;
   }
   #submit {
@@ -805,26 +807,15 @@ textarea {
     overflow-x: hidden;
   }
   /* ------------ Formulario de pedido ------------- */
-  #name,
-  #name-label,
-  #surname,
-  #surname-label,
-  #email,
-  #email-label,
-  #phone,
-  #phone-label,
-  #pais,
-  #pais-label {
-    margin: 0.3%;
-  }
-  #email {
+  #SitBasic_Email {
     margin-left: 3%;
   }
-  #phone {
+  #SitBasicPedido_Tel {
     margin-left: 0.8%;
   }
-  #pais {
-    margin-left: 5.2%;
+  #SitBasic_RedTipPais {
+    margin-left: 0;
+    padding-left: 0;
   }
   #submit {
     margin: 1%;
@@ -921,14 +912,15 @@ textarea {
   .formulario {
     padding: 3%;
   }
-  #email {
+  #SitBasic_Email {
     margin-left: 5%;
   }
-  #phone {
+  #SitBasicPedido_Tel {
     margin-left: 0.8%;
   }
-  #pais {
-    margin-left: 9%;
+  #SitBasic_RedTipPais {
+    margin-left: 0;
+    padding-left: 0;
   }
   #submit {
     margin: 4%;

@@ -8,7 +8,6 @@
 <option value="AD">ANDORRA</option><br />
 <option value="AO">ANGOLA</option><br />
 <option value="AI">ANGUILLA</option><br />
-<option value="MK">ANTIGUA REPUBLICA YUGOSLAVA DE MACEDONIA</option><br />
 <option value="AG">ANTIGUA Y BARBUDA</option><br />
 <option value="AN">ANTILLAS HOLANDESAS</option><br />
 <option value="SA">ARABIA SAUDITA</option><br />
@@ -98,7 +97,6 @@
 <option value="FK">ISLAS ( MALVINAS )</option><br />
 <option value="KY">ISLAS CAIMAN</option><br />
 <option value="CK">ISLAS COOK</option><br />
-<option value="GS">ISLAS DE GEORGIA DEL SUR Y SANDWICH DEL SUR</option><br />
 <option value="FO">ISLAS FEROE</option><br />
 <option value="MP">ISLAS MARIANAS DEL NORTE</option><br />
 <option value="SB">ISLAS SALOMON</option><br />
@@ -165,7 +163,7 @@
 <option value="CD">REPUBLICA DEMOCRATICA DEL CONGO</option><br />
 <option value="LA">REPUBLICA DEMOCRATICA POPULAR LAO</option><br />
 <option value="DO">REPUBLICA DOMINICANA</option><br />
-<option value="KP">REPUBLICA POPULAR DEMOCRATICA DE COREA</option><br />
+<option value="MK">REPUBLICA DE MACEDONIA DEL NORTE</option><br />
 <option value="TZ">REPUBLICA UNIDA DE TANZANIA</option><br />
 <option value="RW">RUANDA</option><br />
 <option value="RO">RUMANIA</option><br />

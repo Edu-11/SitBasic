@@ -196,43 +196,6 @@
                           <option value="FALTA INDICAR PAIS">Selecciona PAIS</option>
                           <?php include "opcionesPaises.php"
                         ?>
-                          <!-- <option value="1">ESPA&Ntilde;A</option>
-                          <option value="2">FRANCIA</option>
-                          <option value="3">ESPA&Ntilde;A - Islas Baleares</option>
-                          <option value="4">ESPA&Ntilde;A - Islas Canarias</option>
-                          <option value="5">ESTADOS UNIDOS</option>
-                          <option value="7">SUIZA</option>
-                          <option value="8">ITALIA</option>
-                          <option value="9">GERMANY</option>
-                          <option value="10">PORTUGAL</option>
-                          <option value="11">SWEDEN</option>
-                          <option value="12">UNITED STATES OF AMERICA</option>
-                          <option value="13">BELGIUM</option>
-                          <option value="14">HOLANDA</option>
-                          <option value="15">PERU</option>
-                          <option value="16">BRASIL</option>
-                          <option value="17">CHILE</option>
-                          <option value="18">MEXICO</option>
-                          <option value="19">ESPA&Ntilde;A - Catalunya</option>
-                          <option value="20">GRAN BRETA&Ntilde;A</option>
-                          <option value="21">REINO UNIDO</option>
-                          <option value="22">DINAMARCA</option>
-                          <option value="23">ESLOVENIA</option>
-                          <option value="24">TAIWAN</option>
-                          <option value="25">VENEZUELA</option>
-                          <option value="26">MARRUECOS</option>
-                          <option value="27">REINO UNIDO - UNITED KINGDOM</option>
-                          <option value="28">INDIA</option>
-                          <option value="29">COLOMBIA</option>
-                          <option value="30">TUNEZ</option>
-                          <option value="31">GUATEMALA</option>
-                          <option value="32">SRI-LANKA</option>
-                          <option value="33">JORDANIA</option>
-                          <option value="34">AUSTRIA</option>
-                          <option value="35">ARGENTINA</option>
-                          <option value="36">ANDORRA</option>
-                          <option value="37">CHINA</option>
-                          <option value="38">SOUTH AFRICA</option> -->
                       </select><br>
                       <label id="desplegable_pedido" for="SitBasicPedido_Unidades">Unidades</label>
                       <input name="SitBasicPedido_Unidades" type="number" class="CampoFormulario"
@@ -280,47 +243,11 @@
                           <?php
                           include "valoresForm.php";
                           ?>
-                          <!-- <input type="hidden" name="SitBasic_ObservacionesInfPersonal" value="" />
-                          <input type="hidden" name="SitBasic_NomCialApePers" value="" />
-                          <input type="hidden" name="SitBasic_NomPers" value="" />
-                          <input type="hidden" name="SitBasic_ApePers" value="" />
-                          <input type="hidden" name="SitBasic_FiscalNom" value="" />
-                          <input type="hidden" name="SitBasic_NIF" value="" />
-                          <input type="hidden" name="SitBasic_Dir" value="" />
-                          <input type="hidden" name="SitBasic_FiscalDir" value="" />
-                          <input type="hidden" name="SitBasic_CodPostCodPostal" value="" />
-                          <input type="hidden" name="SitBasic_Poblacion" value="" />
-                          <input type="hidden" name="SitBasic_Numero" value="" />
-                          <input type="hidden" name="SitBasic_RedTipPais" value="" />
-                          <input type="hidden" name="SitBasic_Web" value="" />
-                          <input type="hidden" name="SitBasic_Email" value="" />
-                          <input type="hidden" name="SitBasic_Tel" value="" />
-                          <input type="hidden" name="SitBasic_MobTel" value="" />
-                          <input type="hidden" name="SitBasic_Fax" value="" />
-                          <input type="hidden" name="SitBasic_NomPers" value="" />
-                          <input type="hidden" name="SitBasic_Id" value="" />
-                          <input type="hidden" name="SitBasic_FeTraspasoPersona" value="" />
-                          <input type="hidden" name="SitBasic_Activo" value="" />
-                          <input type="hidden" name="SitBasic_OfertaInfPersonal" value="" />
-                          <input type="hidden" name="SitBasic_Sector03" value="" />
-                          <input type="hidden" name="SitBasic_Sector04" value="" />
-                          <input type="hidden" name="SitBasic_Sector05" value="" />
-                          <input type="hidden" name="SitBasic_Sector06" value="" />
-                          <input type="hidden" name="SitBasic_PedidoComentario" value="" /> 
-
-                          <input type="hidden" name="SitBasic_PedidoFormulario" value="catalogo SitBasic" />
-                          <input type="hidden" name="SitBasic_PedidoEmailEmpresa" value="contact@pimeslu.com" />
-                          <input type="hidden" name="SitBasic_PedidoSector01" value="WebCatSitBasic" /> -->
                           <input type="hidden" name="SitBasic_PedidoSector02" value="SB100H6Z2NCB140I27ALI" />
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="619" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga" value="BANCO CABALLER&Iacute;A plegable, madera IROCO " />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_BancoCaballeria.php" class="Boton_Banco_Caballeria" value="Comprar" />
                         </form>
-
-                        <!-- <div class="Boton_Comprar">
-                            <a href="/producto_BancoCaballeria.php"><button
-                                    class="Boton_Banco_Caballeria">Comprar</button></a>
-                        </div> -->
                     </div>
                 </div>
                 <div class="Tabla_Licencia">
@@ -341,37 +268,6 @@
                           <?php
                           include "valoresForm.php";
                           ?>
-                          <!-- <input type="hidden" name="SitBasic_ObservacionesInfPersonal" value="" />
-                          <input type="hidden" name="SitBasic_NomCialApePers" value="" />
-                          <input type="hidden" name="SitBasic_NomPers" value="" />
-                          <input type="hidden" name="SitBasic_ApePers" value="" />
-                          <input type="hidden" name="SitBasic_FiscalNom" value="" />
-                          <input type="hidden" name="SitBasic_NIF" value="" />
-                          <input type="hidden" name="SitBasic_Dir" value="" />
-                          <input type="hidden" name="SitBasic_FiscalDir" value="" />
-                          <input type="hidden" name="SitBasic_CodPostCodPostal" value="" />
-                          <input type="hidden" name="SitBasic_Poblacion" value="" />
-                          <input type="hidden" name="SitBasic_Numero" value="" />
-                          <input type="hidden" name="SitBasic_RedTipPais" value="" />
-                          <input type="hidden" name="SitBasic_Web" value="" />
-                          <input type="hidden" name="SitBasic_Email" value="" />
-                          <input type="hidden" name="SitBasic_Tel" value="" />
-                          <input type="hidden" name="SitBasic_MobTel" value="" />
-                          <input type="hidden" name="SitBasic_Fax" value="" />
-                          <input type="hidden" name="SitBasic_NomPers" value="" />
-                          <input type="hidden" name="SitBasic_Id" value="" />
-                          <input type="hidden" name="SitBasic_FeTraspasoPersona" value="" />
-                          <input type="hidden" name="SitBasic_Activo" value="" />
-                          <input type="hidden" name="SitBasic_OfertaInfPersonal" value="" />
-                          <input type="hidden" name="SitBasic_Sector03" value="" />
-                          <input type="hidden" name="SitBasic_Sector04" value="" />
-                          <input type="hidden" name="SitBasic_Sector05" value="" />
-                          <input type="hidden" name="SitBasic_Sector06" value="" />
-                          <input type="hidden" name="SitBasic_PedidoComentario" value="" />
-
-                          <input type="hidden" name="SitBasic_PedidoFormulario" value="catalogo SitBasic" />
-                          <input type="hidden" name="SitBasic_PedidoEmailEmpresa" value="contact@pimeslu.com" />
-                          <input type="hidden" name="SitBasic_PedidoSector01" value="WebCatSitBasic" /> -->
                           <input type="hidden" name="SitBasic_PedidoSector02" value="SBCOPY1" />
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="10" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga"
@@ -379,12 +275,6 @@
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_Licencia.php" class="Boton_Herrajes_S"
                             value="Comprar" />
                         </form>
-
-                        <!-- <div class="Boton_Comprar">
-                            <a href="/producto_Licencia.php">
-                                <button class="Boton_Licencia">Comprar</button>
-                            </a>
-                        </div> -->
                     </div>
                 </div>
             </div>
