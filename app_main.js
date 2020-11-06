@@ -123,18 +123,6 @@ function stopAutoPlay() {
   });
 }
 
-// function clickIndicator() {
-//   getElement.indicators.forEach(function (indicator) {
-//     indicator.addEventListener("click", function (e) {
-//       reset("indicators", "active");
-//       e.target.classList.add("active");
-//       var currIndicator = e.target.dataset.slideTo * 1;
-//       prop.id = currIndicator;
-//       addClass(currIndicator);
-//     });
-//   });
-// };
-
 init(prop.id);
 
 getElement.nextBtn.addEventListener("click", function () {
@@ -164,24 +152,13 @@ function elementInViewport() {
 video.onplaying = function () {
   window.addEventListener("scroll", function () {
     if (!elementInViewport()) {
-      video.pause()
-    } else if (elementInViewport()) {
-      video.play()
+      video.pause();
+      autoPlay();
     }
   })
 };
 
-// function setPause() {
-//   if (video.pause()) {
-//     console.log("PAUSA");
-//   } else if (video.play()) {
-//     console.log("REPRODUCIENDO")
-//   }
-// }
-
-// setPause();
-
-/* Seguridad, delay en el botón de enviar del formulario */
+/* Seguridad, desde que se comienza a rellenar delay de activación de 5 segundos en el botón de enviar del formulario */
 
 const form = document.querySelector('form');
 const inputs = document.querySelectorAll('input');
@@ -197,5 +174,22 @@ form.addEventListener('keydown', function () {
             }, 5000)
         } 
     })
+})
+
+/* Comprobación de que la dirección de email insertada es correcta */
+
+const email = document.querySelector('#BancoMadera_Hip_Email');
+const check = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+const mensaje = document.getElementById('mensajeEmail');
+const br = document.createElement('br');
+
+
+email.addEventListener('focusout', function () {
+  if (check.test(email.value)) {
+    mensaje.classList.toggle("mensaje")
+  } else if (!check.test(email.value)) {
+    mensaje.appendChild(br);
+    mensaje.classList.toggle("mensaje")
+  }
 })
 

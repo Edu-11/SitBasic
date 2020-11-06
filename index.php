@@ -95,7 +95,6 @@
                 <img class="slide__img" src="./images/SitBasic_04_Slider3.jpg"
                     alt="slider-2">
                 <div class="slide__caption">
-                    <!-- <span class="slide__caption--title">Slide 3</span> -->
                     <span class="slide__caption--text">Útil y práctico. Fácil de plegar, transportar y desplegar por una persona. <a href="./galeria.html">Ver más</a></span>
                 </div>
             </div>
@@ -105,7 +104,6 @@
                     Tu navegador no soporta video en HTML5.
                 </video>
                 <div class="slide__caption">
-                    <!-- <span class="slide__caption--title">Slide 4</span> -->
                     <span class="slide__caption--text texto-video">Un estupendo proyecto para los aficionados al bricolaje. <a href="./galeria.html">Ver más</a></span>
                 </div>
             </div>
@@ -290,8 +288,7 @@
           <h2 class="titulo_contacto">Hablemos</h2>
           <form id="form" class="formulario" method="post" action="./FormularioWebControl.php">
 
-              <!-- Valores "escondidos" para pasar al Php -->
-
+              <!-- Valores para pasar a la página de producto -->
               <input type="hidden" name="BancoMadera_EmailEmpresa" value="ecaubilla@hotmail.com" />
               <input type="hidden" name="BancoMadera_Sector01" value="BANCO_FRM" />
               <input type="hidden" name="BancoMadera_ValorAntiMaquina" value="5" />
@@ -312,6 +309,7 @@
                   <input id="BancoMadera_Hip_Email" class="CampoFormulario" type="email" name="BancoMadera_Hip_Email"
                       placeholder="Escribe un correo válido" required="">
                   <br>
+                  <sub id="mensajeEmail" class="mensaje">Parece que este correo es incorrecto. Por favor compruébelo.</sub>
 
                   <label id="phone-label" for="BancoMaderaTel">Teléfono</label>
                   <input id="BancoMadera_Tel_Principal" class="CampoFormulario" type="text" name="BancoMaderaTel"
@@ -319,7 +317,6 @@
                   <br>
 
                   <label id="pais-label" for="BancoMadera_Pais">País</label>
-                  <!-- <input id="BancoMadera_Pais" class="CampoFormulario" type="text" name="BancoMadera_Pais" placeholder="País"><br> -->
                   <select name="BancoMadera_Pais" class="CampoFormulario" id="BancoMadera_Pais">
                       <option value="FALTA INDICAR PAIS">Selecciona PAIS</option>
                       <?php include "opcionesPaises.php"

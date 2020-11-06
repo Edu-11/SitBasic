@@ -159,7 +159,6 @@
                   <input type="hidden" name="SitBasicPedido_Sector2" value="<?php echo $Sector2;?>" />
                   <input type="hidden" name="SitBasicPedido_Precio" value="<?php echo $Precio001;?>" />
                   <input type="hidden" name="SitBasicPedido_ReferenciaLarga" value="<?php echo $ReferenciaLarga;?>" />
-                  <!-- <input type="hidden" name="SitBasicPedido_ValorAntiMaquina" value="5" /> -->
 
                   <!-- Datos principales -->
                       <label id="name-label" for="SitBasicPedido_NomPers">*Nombre</label>
@@ -171,11 +170,11 @@
                       <label id="email-label" for="SitBasic_Email">*Email</label>
                       <input id="SitBasic_Email" class="CampoFormulario" type="email" name="SitBasic_Email"
                           placeholder="Escribe un correo válido" required=""><br>
+                      <sub id="mensajeEmail" class="mensaje">Parece que este correo es incorrecto. Por favor compruébelo.</sub>
                       <label id="phone-label" for="SitBasicPedido_Tel">Teléfono</label>
                       <input id="SitBasicPedido_Tel" class="CampoFormulario" type="text" name="SitBasicPedido_Tel"
                           placeholder="Escribe tu número de teléfono"><br>
                       <label id="pais-label" for="SitBasic_RedTipPais">País</label>
-                      <!-- <input id="BancoMadera_Pais" class="CampoFormulario" type="text" name="BancoMadera_Pais" placeholder="País"><br> -->
                       <select name="SitBasic_RedTipPais" class="CampoFormulario" id="SitBasic_RedTipPais">
                           <option value="FALTA INDICAR PAIS">Selecciona PAIS</option>
                           <?php include "opcionesPaises.php"

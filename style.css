@@ -664,6 +664,11 @@ Dividida en dos cuerpos; Historia y Rediseño.
   font-size: 2rem;
 }
 
+.Contacto sub {
+  font-size: 1rem;
+  color: tomato;
+}
+
 .formulario {
   text-align: center;
 }
@@ -723,6 +728,10 @@ textarea {
   cursor: pointer;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
+}
+
+.mensaje {
+  display: none;
 }
 
 /*------------ Footer ---------------*/
