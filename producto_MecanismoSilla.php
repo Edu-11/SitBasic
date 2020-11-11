@@ -235,7 +235,7 @@
                         <form id="producto_Banco" method="post" action="producto_BancoCaballeria.php">
                           <?php
                           include "valoresForm.php";
-                          ?>¡
+                          ?>
                           <input type="hidden" name="SitBasic_PedidoSector02" value="SB100H6Z2NCB140I27ALI" />
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="619" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga" value="BANCO CABALLER&Iacute;A plegable, madera IROCO " />
