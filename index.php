@@ -311,8 +311,8 @@
                   <br>
                   <sub id="mensajeEmail" class="mensaje">Parece que este correo es incorrecto. Por favor compruébelo.</sub>
 
-                  <label id="phone-label" for="BancoMaderaTel">Teléfono</label>
-                  <input id="BancoMadera_Tel_Principal" class="CampoFormulario" type="text" name="BancoMaderaTel"
+                  <label id="phone-label" for="BancoMadera_Tel">Teléfono</label>
+                  <input id="BancoMadera_Tel" class="CampoFormulario" type="text" name="BancoMadera_Tel"
                       placeholder="Número de teléfono.">
                   <br>
 

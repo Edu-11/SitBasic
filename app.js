@@ -29,35 +29,50 @@ navSlide();
 
 /* Seguridad, desde que se comienza a rellenar delay de activación de 5 segundos en el botón de enviar del formulario */
 
-const form = document.querySelector('form');
+const nombre = document.getElementById("SitBasicPedido_NomPers");
 const inputs = document.querySelectorAll('input');
 const botonEnviar = document.querySelector('.boton_enviar');
 
-
-form.addEventListener('keydown', function () {
-    inputs.forEach(input => {
-        if (input.value !== '') {
-            botonEnviar.disabled = true;
-            setTimeout(() => {
-                botonEnviar.disable = false;
-            }, 5000)
-        } 
-    })
-})
+if (nombre != null){
+nombre.addEventListener('focus', function () {
+  console.log("Seguridad Botón");
+  console.log(inputs)
+  inputs.forEach(input => {
+      if (input.value !== '') {
+          botonEnviar.disabled = true;
+          setTimeout(() => {
+              botonEnviar.disabled = false;
+              console.log("funciona botón")
+          }, 10000)
+      } 
+  })
+})}
 
 /* Comprobación de que la dirección de email insertada es correcta */
 
 const email = document.querySelector('#SitBasic_Email');
 const check = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-const mensaje = document.getElementById('mensajeEmail');
+const mensajeEmail = document.getElementById('mensajeEmail');
+const mensaje = document.getElementsByClassName('mensaje')
 const br = document.createElement('br');
 
-
 email.addEventListener('focusout', function () {
+  console.log(email.value);
   if (check.test(email.value)) {
-    mensaje.classList.toggle("mensaje")
+    if (mensaje.length == 0) {
+    mensajeEmail.classList.add("mensaje")
+    }
   } else if (!check.test(email.value)) {
-    mensaje.appendChild(br);
-    mensaje.classList.toggle("mensaje")
+    if (mensaje.length > 0) {
+    mensajeEmail.appendChild(br);
+    mensajeEmail.classList.toggle("mensaje")
+    }
   }
 })
+
+/* Limpia el fomulario cuando carga la página */
+const form = document.querySelector("#formulario_compra #form");
+window.addEventListener('load', function () {
+  form.reset()
+})
+

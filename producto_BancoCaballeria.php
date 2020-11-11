@@ -229,7 +229,7 @@
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="215" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga" value="MECANISMO plegable SITBASIC de hierro natural para banco de 120 a 160 cms de ancho" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_MecanismoBanco.php"
-                            class="Boton_Herrajes_B" value="Comprar" />
+                            class="Boton_Herrajes_B" value="Ver Producto" />
                         </form>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga"
                             value="MECANISMO plegable SITBASIC de hierro natural para SILLA de 45 cms de ancho" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_MecanismoSilla.php" class="Boton_Herrajes_S"
-                            value="Comprar" />
+                            value="Ver Producto" />
                         </form>
                     </div>
                 </div>
@@ -298,10 +298,10 @@
 
     //$emailcliente = $_POST['SitBasic_PedidoHip_Email'];
 
-    $DatosEmpresa = 'PIMESLU'."\n";
-    $DatosEmpresa = $DatosEmpresa . $EmailEmpresa ."\n";
-    $DatosEmpresa = $DatosEmpresa . 'Calle Teodora Lamadrid 31 '."\n";
-    $DatosEmpresa = $DatosEmpresa . '08022 BARCELONA ESPA�A EUROPA '."\n";
+    $DatosEmpresa = 'PIMESLU ( Promotora Inmobiliaria y Mercantil SLU )'."\n"."\n";
+    $DatosEmpresa = $DatosEmpresa. $emailempresa ."\n";
+    $DatosEmpresa = $DatosEmpresa. 'Calle Teodora Lamadrid 31 '."\n";
+    $DatosEmpresa = $DatosEmpresa. '08022 BARCELONA'."\n". 'ESPAÑA'."\n";
 
     ?>
 

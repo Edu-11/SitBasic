@@ -246,7 +246,7 @@
                           <input type="hidden" name="SitBasic_PedidoSector02" value="SB100H6Z2NCB140I27ALI" />
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="619" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga" value="BANCO CABALLER&Iacute;A plegable, madera IROCO " />
-                          <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_BancoCaballeria.php" class="Boton_Banco_Caballeria" value="Comprar" />
+                          <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_BancoCaballeria.php" class="Boton_Banco_Caballeria" value="Ver producto" />
                         </form>
                     </div>
                 </div>
@@ -273,7 +273,7 @@
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga"
                             value="PLANO Y LICENCIA Sitbasic Plegable" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_Licencia.php" class="Boton_Herrajes_S"
-                            value="Comprar" />
+                            value="Ver producto" />
                         </form>
                     </div>
                 </div>

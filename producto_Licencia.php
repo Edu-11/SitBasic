@@ -234,7 +234,7 @@
                           <input type="hidden" name="SitBasic_PedidoPrecio" value="215" />
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga" value="MECANISMO plegable SITBASIC de hierro natural para banco de 120 a 160 cms de ancho" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_MecanismoBanco.php"
-                            class="Boton_Herrajes_B" value="Comprar" />
+                            class="Boton_Herrajes_B" value="Ver producto" />
                         </form>
                     </div>
                 </div>
@@ -261,7 +261,7 @@
                           <input type="hidden" name="SitBasic_PedidoReferenciaLarga"
                             value="MECANISMO plegable SITBASIC de hierro natural para SILLA de 45 cms de ancho" />
                           <input name="SitBasic_PedidoSubmit" type="submit" href="./producto_MecanismoSilla.php" class="Boton_Herrajes_S"
-                            value="Comprar" />
+                            value="Ver producto" />
                         </form>
                     </div>
                 </div>

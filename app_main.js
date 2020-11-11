@@ -158,38 +158,81 @@ video.onplaying = function () {
   })
 };
 
-/* Seguridad, desde que se comienza a rellenar delay de activación de 5 segundos en el botón de enviar del formulario */
+/* Seguridad, desde que se comienza a rellenar campos obligados delay de activación de 5 segundos en el botón de enviar del formulario */
 
-const form = document.querySelector('form');
+const nombre = document.getElementById("BancoMadera_NomPers");
 const inputs = document.querySelectorAll('input');
+
 const botonEnviar = document.querySelector('.boton_enviar');
 
-
-form.addEventListener('keydown', function () {
-    inputs.forEach(input => {
-        if (input.value !== '') {
-            botonEnviar.disabled = true;
-            setTimeout(() => {
-                botonEnviar.disable = false;
-            }, 5000)
-        } 
-    })
-})
+if (nombre != null){
+nombre.addEventListener('focus', function () {
+  console.log(inputs)
+  inputs.forEach(input => {
+      if (input.value !== '') {
+          botonEnviar.disabled = true;
+          setTimeout(() => {
+              botonEnviar.disabled = false;
+          }, 10000)
+      } 
+  })
+})}
 
 /* Comprobación de que la dirección de email insertada es correcta */
 
 const email = document.querySelector('#BancoMadera_Hip_Email');
 const check = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-const mensaje = document.getElementById('mensajeEmail');
+const mensajeEmail = document.getElementById('mensajeEmail');
+const mensaje = document.getElementsByClassName('mensaje')
 const br = document.createElement('br');
 
-
 email.addEventListener('focusout', function () {
+  console.log(email.value);
   if (check.test(email.value)) {
-    mensaje.classList.toggle("mensaje")
+    if (mensaje.length == 0) {
+    mensajeEmail.classList.add("mensaje")
+    }
   } else if (!check.test(email.value)) {
-    mensaje.appendChild(br);
-    mensaje.classList.toggle("mensaje")
+    if (mensaje.length > 0) {
+    mensajeEmail.appendChild(br);
+    mensajeEmail.classList.toggle("mensaje")
+    }
   }
 })
 
+/* Limpia el fomulario cuando carga la página */
+
+const form = document.querySelector("#Contacto #form");
+// const inputsDatosContacto = form.querySelectorAll(".Intro_datos input");
+// const inputsDatosContactoPais = form.querySelectorAll(".Intro_datos select");
+// const selectsDatosContacto = form.querySelectorAll(".Desplegable select");
+// const textDatosContacto = form.querySelectorAll(".Comentarios textarea");
+// console.log(inputsDatosContacto);
+
+window.addEventListener('load', function () {
+  // for (var i = 0; i < inputsDatosContacto.length; i++){
+  //   console.log(inputsDatosContacto[i].value);
+  //   inputsDatosContacto[i].value = '';
+  // }
+
+  // inputsDatosContactoPais.selectedIndex = 0;
+
+  // selectsDatosContacto.selectedIndex = 0;
+
+  // textDatosContacto.value = '';
+
+  form.reset()
+
+
+  // var selects = document.getElementsByTagName('select');
+  // console.log("ENTRAN SELECTS", selects)
+  // for (var i = 0; i < selects.length; i++){
+  //   selects[i].selectedIndex = 0;
+  // }
+  // var textareas = document.getElementsByTagName('textarea');
+  // for (var i = 0; i < textareas.length; i++){
+  //   textareas[i].innerHTML = '';
+  // }
+
+  // return false;
+})
