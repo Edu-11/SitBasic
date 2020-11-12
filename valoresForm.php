@@ -28,5 +28,5 @@
 <input type="hidden" name="SitBasic_PedidoComentario" value="" /> 
 
 <input type="hidden" name="SitBasic_PedidoFormulario" value="catalogo SitBasic" />
-<input type="hidden" name="SitBasic_PedidoEmailEmpresa" value="contact@pimeslu.com" />
+<input type="hidden" name="SitBasic_PedidoEmailEmpresa" value="banco@pimeslu.com" />
 <input type="hidden" name="SitBasic_PedidoSector01" value="WebCatSitBasic" />

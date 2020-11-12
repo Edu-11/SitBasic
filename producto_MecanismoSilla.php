@@ -20,6 +20,12 @@
 </head>
  
   <?php 
+    $DatosEmpresa = 'PIMESLU'."\n";
+    $DatosEmpresa = $DatosEmpresa . $_POST['SitBasic_PedidoEmailEmpresa'] ."\n";
+    $DatosEmpresa = $DatosEmpresa . 'Calle Teodora Lamadrid 31 '."\n";
+    $DatosEmpresa = $DatosEmpresa . '08022 Barcelona'."\n". 'España'. "\n";
+    $DatosEmpresa = $DatosEmpresa. 'CIF B08448300'."\n";
+
 		$ObservacionesInfPersonal = $_POST['SitBasic_ObservacionesInfPersonal'];
 		$NomCialApePers = $_POST['SitBasic_NomCialApePers'] ;
 		$NomPers = $_POST['SitBasic_NomPers'] ;
@@ -48,18 +54,14 @@
 		$Activo = $_POST['SitBasic_Activo'] ;
     $OfertaInfPersonal = $_POST['SitBasic_OfertaInfPersonal'] ;
     
-    //$FormularioPedidoPaginaRespuestaError = 'Location: http://www.sitbasic.com/test/FormularioPedidoPaginaRespuestaError.html';
     $FormularioPedidoPaginaRespuestaGracias = 'Location: http://www.sitbasic.com/test/pedido_realizado.html';
 
     $PaginaWeb = 'www.SitBasic.com';
     $PaginaWebIndex = 'http://www.sitbasic.com/index.html';
     $DirectorioRaizFormulario = 'http://www.sitbasic.com/01Esp/html/';
-    //$FormularioPedidoPaginaRespuestaError = 'Location: '.$DirectorioRaizFormulario.'FormularioPedidoPaginaRespuestaError.html';
-    //$FormularioPedidoPaginaRespuestaGracias = 'Location: '.$DirectorioRaizFormulario.'FormularioPedidoPaginaRespuestaGracias.html';
 
     $Formulario = $_POST['SitBasic_PedidoFormulario'];
-    //$EmailEmpresa = $_POST['SitBasic_PedidoEmailEmpresa'];
-    $EmailEmpresa = 'ecaubilla@hotmail.com';
+    $EmailEmpresa = $_POST['SitBasic_PedidoEmailEmpresa'];
     $Precio001 = $_POST['SitBasic_PedidoPrecio']; 
     $ReferenciaLarga = $_POST['SitBasic_PedidoReferenciaLarga'];
     $Unidades = $_COOKIE["ud"];
@@ -76,16 +78,16 @@
 
             <ul class="nav-links">
                 <li class="nav-item">
-                    <a href="index.html#Galeria">GALERÍA</a>
+                    <a href="index.php#Galeria">GALERÍA</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html#Disegno">DISEÑO</a>
+                    <a href="index.php#Disegno">DISEÑO</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html#Catalogo">CATÁLOGO</a>
+                    <a href="index.php#Catalogo">CATÁLOGO</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html#Contacto">CONTACTO</a>
+                    <a href="index.php#Contacto">CONTACTO</a>
                 </li>
             </ul>
             <div class="burger">
@@ -164,12 +166,11 @@
                       value="<?php echo $FormularioPedidoPaginaRespuestaGracias;?>" />
                   <input type="hidden" name="SitBasicPedido_Formulario" value="<?php echo $Formulario;?>" />
                   <input type="hidden" name="SitBasicPedido_DatosEmpresa" value="<?php echo $DatosEmpresa;?>" />
-                  <input type="hidden" name="SitBasicPedido_EmailEmpresa" value="ecaubilla@hotmail.com" />
+                  <input type="hidden" name="SitBasicPedido_EmailEmpresa" value="banco@pimeslu.com" />
                   <input type="hidden" name="SitBasicPedido_Sector1" value="<?php echo $Sector1;?>" />
                   <input type="hidden" name="SitBasicPedido_Sector2" value="<?php echo $Sector2;?>" />
                   <input type="hidden" name="SitBasicPedido_Precio" value="<?php echo $Precio001;?>" />
                   <input type="hidden" name="SitBasicPedido_ReferenciaLarga" value="<?php echo $ReferenciaLarga;?>" />
-                  <!-- <input type="hidden" name="SitBasicPedido_ValorAntiMaquina" value="5" /> -->
 
                   <!-- Datos principales -->
                       <label id="name-label" for="SitBasicPedido_NomPers">*Nombre</label>
@@ -292,7 +293,6 @@
     
     $Contenido = "PRESUPUESTO desde ".$Formulario.", proforma de ".$Unidades." unidad ".$Sector2." ".$ReferenciaLarga." valorados en ".$Precio001. " Euros";
     $NombreLibroVisitas = $Sector1;
-    // $RetrocesoDirectorio = "../../";
     $RetrocesoDirectorio = "../";
     $UsuarioWeb = gethostbyaddr($_SERVER['REMOTE_ADDR']);
     
@@ -304,14 +304,6 @@
     $ficherotxt = fopen($ArchivoLibroVisitas,"a"); //Se abre el archivo .txt
     fwrite($ficherotxt,$LineaLibroVisitas); //Se ponen los datos obtenidos en el archivo
     fclose($ficherotxt); //Se cierra el archivo
-
-
-    //$emailcliente = $_POST['SitBasic_PedidoHip_Email'];
-
-    $DatosEmpresa = 'PIMESLU'."\n";
-    $DatosEmpresa = $DatosEmpresa . $EmailEmpresa ."\n";
-    $DatosEmpresa = $DatosEmpresa . 'Calle Teodora Lamadrid 31 '."\n";
-    $DatosEmpresa = $DatosEmpresa . '08022 BARCELONA ESPA�A EUROPA '."\n";
 
     ?>
 

@@ -27,7 +27,7 @@
 <body>
     <header id="header" class="sticky">
         <nav class="nav-bar">
-            <a class="navbar-brand" href="index.html"><img id="header-img" src="./images/LogoSitBasicOK.png"
+            <a class="navbar-brand" href="index.php"><img id="header-img" src="./images/LogoSitBasicOK.png"
             type="image/png" alt="logo" /></a>
 
             <ul class="nav-links">
@@ -289,7 +289,7 @@
           <form id="form" class="formulario" method="post" action="./FormularioWebControl.php">
 
               <!-- Valores para pasar a la página de producto -->
-              <input type="hidden" name="BancoMadera_EmailEmpresa" value="ecaubilla@hotmail.com" />
+              <input type="hidden" name="BancoMadera_EmailEmpresa" value="banco@pimeslu.com" />
               <input type="hidden" name="BancoMadera_Sector01" value="BANCO_FRM" />
               <input type="hidden" name="BancoMadera_ValorAntiMaquina" value="5" />
 
